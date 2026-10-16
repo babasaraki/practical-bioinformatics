@@ -1,0 +1,96 @@
+# Structure of the book {.unnumbered}
+
+The book has sixteen chapters in eight parts. The parts are ordered so that each one
+supplies something the next one needs, but most chapters can be read on their own if
+you already have the prerequisite.
+
+## Part I — Foundations {.unnumbered}
+
+**Chapter 1** defines the field as it is actually practised, works through the
+arithmetic that makes computation unavoidable, traces how the methods grew with the
+data, and sets up your computer. By the end of it you will have run your first
+analysis.
+
+**Chapter 2** covers the molecular biology that shows up in files: reading frames,
+reverse complements, splicing, coordinate systems, and the vocabulary of variation.
+Every concept is tied to something that will otherwise bite you later.
+
+## Part II — Biological data and databases {.unnumbered}
+
+**Chapter 3** is about the archives: what distinguishes a primary archive from a
+curated knowledgebase, what accession numbers and versions actually mean, how to
+read a record, and how to retrieve data programmatically without abusing a public
+service.
+
+## Part III — Sequence analysis {.unnumbered}
+
+**Chapter 4** derives pairwise alignment from first principles, implements it, then
+shows what scoring matrices do, how BLAST makes search tractable, what an E-value
+means, how multiple alignment works and how a phylogeny follows from one.
+
+## Part IV — The bioinformatics toolchain {.unnumbered}
+
+**Chapter 5** teaches the command line as a working environment: streams and pipes,
+the text-processing tools, scripting, and job submission on a cluster.
+
+**Chapter 6** teaches Python through biological data, ending with a reusable module
+and a command-line tool of your own.
+
+**Chapter 7** teaches R and Bioconductor: the tidyverse, ggplot2 as a grammar, and
+the Bioconductor classes — `GRanges`, `SummarizedExperiment` — that the analysis
+chapters rely on.
+
+## Part V — Genomes, reads and structures {.unnumbered}
+
+**Chapter 8** goes from assembled sequence to annotated genome, including a real
+comparison between an *ab initio* gene prediction and the reference annotation.
+
+**Chapter 9** is the longest chapter: sequencing data end to end, from FASTQ and
+quality encodings through alignment, SAM/BAM anatomy and variant calling, to a
+complete differential expression analysis.
+
+**Chapter 10** computes real quantities from protein coordinates, and takes
+predicted structures seriously enough to explain what their confidence measures do
+and do not mean.
+
+## Part VI — Systems biology and data science {.unnumbered}
+
+**Chapter 11** treats biological networks quantitatively and implements enrichment
+analysis from first principles so that you know what the tools are doing.
+
+**Chapter 12** covers the statistics and machine learning that omics data demands,
+with particular attention to the ways high-dimensional data produces confident
+nonsense.
+
+## Part VII — Applications and responsible practice {.unnumbered}
+
+**Chapter 13** applies all of it to cancer genomics, rare disease diagnostics,
+pharmacogenomics and pathogen surveillance.
+
+**Chapter 14** addresses privacy, consent, governance, equity and data sovereignty —
+the obligations that attach to human genomic data.
+
+## Part VIII — Consolidation {.unnumbered}
+
+**Chapter 15** is a capstone project carried out in full, including the parts that
+usually go unrecorded: the dead ends, the environment capture, the write-up.
+
+**Chapter 16** synthesises the whole book, provides a graded question bank with
+worked answers, and sets out learning pathways for different starting points.
+
+## Appendices {.unnumbered}
+
+A glossary of every technical term used in the book; the software environment and
+how to install it; the provenance of every bundled dataset; and a command and
+function reference for quick lookup.
+
+## Reading paths {.unnumbered}
+
+| If you are | Read |
+|---|---|
+| New to both biology and computing | 1, 2, 5, 6, 3, 4, then Part V onward |
+| A biologist new to computing | 1, 2, 5, 6 or 7, 3, 4, 9, then by interest |
+| A programmer new to biology | 2, 3, 4, 8, 9, 10, then Part VI |
+| Focused on RNA-seq | 2, 5, 7, 9, 11, 12 |
+| Focused on pathogen genomics | 2, 3, 4, 5, 8, 9, 13, 14 |
+| Teaching a one-semester course | One chapter per week, 1–15, with Chapter 16 for assessment |

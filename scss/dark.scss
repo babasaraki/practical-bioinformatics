@@ -1,0 +1,15 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Source Sans 3", "Source Sans Pro", -apple-system, "Segoe UI", Roboto, sans-serif !default;
+$font-family-monospace:  "Source Code Pro", "SFMono-Regular", Menlo, Consolas, monospace !default;
+$font-size-root: 17px !default;
+$body-bg: #15181c !default;
+$body-color: #d7dce1 !default;
+$primary: #5dade2 !default;
+$secondary: #48c9b0 !default;
+$code-bg: #1d2127 !default;
+
+/*-- scss:rules --*/
+h2 { border-bottom: 1px solid #2a2f36; }
+pre.sourceCode { border: 1px solid #2a2f36; }
+.objectives { background: #1b2229; border-left: 4px solid $primary; padding: .9rem 1.1rem; border-radius: 4px; }
+figcaption, table caption { color: #9aa5b1; }

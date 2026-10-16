@@ -1,0 +1,64 @@
+% ---------------------------------------------------------------------------
+% Preamble for the print edition of
+% "Practical Approach to Learning Bioinformatics"
+%
+% The page geometry set in _quarto.yml matches a 6 x 9 in trim, which is both
+% the Chapman & Hall / CRC standard book trim and an Amazon KDP paperback size.
+% If the publisher supplies krantz.cls, set `documentclass: krantz` in
+% _quarto.yml and comment out the KOMA-specific blocks flagged below.
+% ---------------------------------------------------------------------------
+
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{emptypage}
+
+\definecolor{crcblue}{HTML}{1A5276}
+\definecolor{crcgreen}{HTML}{117864}
+\definecolor{crcgrey}{HTML}{F5F5F5}
+
+% --- Running heads and chapter openers (KOMA-specific) ----------------------
+\usepackage[automark,headsepline]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+\automark[section]{chapter}
+\ihead[]{}
+\ohead[]{\small\textsc{\headmark}}
+\ofoot[\pagemark]{\pagemark}
+\setkomafont{pageheadfoot}{\normalfont\footnotesize\color{black!70}}
+\setkomafont{disposition}{\normalfont\bfseries}
+\setkomafont{chapter}{\Huge\bfseries\color{crcblue}}
+\setkomafont{section}{\large\bfseries\color{crcblue}}
+\setkomafont{subsection}{\normalsize\bfseries}
+\setkomafont{caption}{\small}
+\setkomafont{captionlabel}{\small\bfseries}
+\RedeclareSectionCommand[beforeskip=-1\baselineskip,afterskip=1.5\baselineskip]{chapter}
+
+% --- Typographic housekeeping ------------------------------------------------
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.15}
+
+% --- Verbatim/code blocks ----------------------------------------------------
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{%
+  commandchars=\\\{\},breaklines,breaknonspaceingroup,breakanywhere,fontsize=\small}
+\fvset{breaklines=true,breakanywhere=true}
+
+% --- Learning-objectives box -------------------------------------------------
+\usepackage[most]{tcolorbox}
+\newtcolorbox{objectivesbox}{
+  enhanced, breakable, colback=crcblue!5, colframe=crcblue,
+  boxrule=0pt, leftrule=2pt, arc=1pt, left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+\providecommand{\objectives}[1]{\begin{objectivesbox}#1\end{objectivesbox}}
+
+% Pandoc writes fenced divs as environments; map the book's named divs.
+\newenvironment{objectives}{\begin{objectivesbox}}{\end{objectivesbox}}
+\newenvironment{exercise}{\begin{quote}\small}{\end{quote}}
+
+% --- Index -------------------------------------------------------------------
+\usepackage{makeidx}
+\makeindex

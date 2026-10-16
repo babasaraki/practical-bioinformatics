@@ -1,0 +1,196 @@
+---
+title: "Template chapter: how a chapter of this book is built"
+engine: knitr
+---
+
+
+<!--
+This file is NOT part of the book. It is the reference implementation of
+STYLE.md: a short chapter that contains every required element, correctly
+formed, with code that actually runs against the bundled data. Copy its shape,
+not its length - a real chapter runs 4,000-5,500 words.
+-->
+
+::: {.objectives}
+**After working through this chapter you will be able to**
+
+- identify the seven structural elements every chapter of this book contains
+- write a code chunk whose figure can be cross-referenced from the text
+- locate a bundled dataset without hard-coding a path
+- distinguish code that runs at build time from code that is shown but not run
+- apply the citation rules that keep the bibliography trustworthy
+:::
+
+A chapter of this book exists to get a reader from a question to a defensible
+answer. This template shows the machinery that supports that: how the chapter
+opens, how code and prose interleave, how a figure earns its place, and how the
+chapter closes so that a reader can test whether they have actually learned
+something. The worked example uses the SARS-CoV-2 reference genome
+(`data/sequences/sars-cov-2-NC_045512.2.fasta`), which is one of the datasets
+bundled with the book.
+
+The opening is prose, not a list. It names the problem, says why it is worth
+solving, and tells the reader what they will have at the end. Two to four
+paragraphs is right; a reader who wanted a bulleted summary would have read the
+summary.
+
+## Setting up {#sec-template-setup}
+
+Every chapter opens with one setup chunk, shown rather than hidden, so that a
+reader starting in the middle of the book knows what state the code assumes.
+
+```{python}
+#| label: setup
+import sys; sys.path.insert(0, "..")
+from pybfx import book_data, style
+style()
+```
+
+The `book_data` helper resolves a path inside `data/` from whichever directory
+the chapter lives in, which is why no chapter ever contains a literal path such
+as `../data/sequences/file.fasta`.
+
+## Computing something real {#sec-template-computing}
+
+Prose introduces what the code is about to do and why that is the sensible next
+step. Then the code runs, and the output below it is genuine.
+
+```{python}
+#| label: load-genome
+from Bio import SeqIO
+
+record = SeqIO.read(book_data("sequences", "sars-cov-2-NC_045512.2.fasta"), "fasta")
+genome = record.seq
+print(f"{record.id}: {len(genome):,} bp")
+print(f"GC content: {100 * (genome.count('G') + genome.count('C')) / len(genome):.2f}%")
+```
+
+After the code, prose interprets the result. A genome of just under 30 kb with a
+GC content near 38% is typical of a betacoronavirus, and that single number is
+already enough to reject a contaminating human sequence, whose GC content would
+sit near 41%.
+
+## Showing something real {#sec-template-figure}
+
+A figure is introduced before it appears. @fig-template-gc shows how GC content
+varies along the genome, which is the first diagnostic worth running on any new
+assembly: an abrupt shift in composition usually means contamination or a
+misassembly rather than biology.
+
+```{python}
+#| label: fig-template-gc
+#| fig-cap: "GC content of the SARS-CoV-2 reference genome in non-overlapping 500 bp windows. The dashed line marks the genome-wide mean."
+import matplotlib.pyplot as plt
+
+window = 500
+windows = [genome[i:i + window] for i in range(0, len(genome) - window, window)]
+gc = [100 * (w.count("G") + w.count("C")) / len(w) for w in windows]
+starts = [i * window / 1000 for i in range(len(gc))]
+
+fig, ax = plt.subplots()
+ax.plot(starts, gc, linewidth=1.1)
+ax.axhline(sum(gc) / len(gc), linestyle="--", linewidth=1, color="#922B21")
+ax.set_xlabel("Genome position (kb)")
+ax.set_ylabel("GC content (%)")
+ax.set_title("Compositional profile of NC_045512.2")
+fig.tight_layout()
+```
+
+The profile sits close to the genome-wide mean of 38% along most of its length,
+dropping to 31% around 6.5 kb inside ORF1ab and rising conspicuously to 49% at about
+28.5 kb, where the nucleocapsid gene sits. A local excursion of ten percentage points
+across a single gene is ordinary variation between coding regions; what would signal
+contamination is a sustained shift across many windows, or a block whose composition
+matches a different organism. Nothing here looks like that, so the assembly passes
+this check and we can move on.
+
+::: {.callout-warning title="Window size changes the story"}
+Compositional plots are sensitive to window size. A 100 bp window on this genome
+produces a noisy band that invites over-interpretation; a 5 kb window flattens the
+3' peak entirely. Choose the window from the scale of the feature you are looking
+for, and state the choice in your methods.
+:::
+
+## Code that cannot run here {#sec-template-noneval}
+
+Some commands need software or data that the book cannot carry. Those are shown
+but not executed, and the output that follows was captured from a real run.
+
+```{.bash}
+# Not executed at build time: requires a local BLAST+ installation.
+blastn -query data/sequences/TP53-NM_000546.6.fasta \
+       -db nt -remote -outfmt 6 -max_target_seqs 5
+```
+
+Running that command against the NCBI `nt` database returns tabular hits whose
+first column is the query identifier and whose third column is percentage
+identity; the top hit is the query itself at 100%, which is the sanity check
+that the search was set up correctly.
+
+::: {.callout-tip title="Check the self-hit first"}
+Whenever a similarity search returns something surprising, confirm that the
+query finds itself before you interpret anything else. A missing self-hit almost
+always means the wrong database, the wrong alphabet or a truncated query.
+:::
+
+## Summary {#sec-template-summary}
+
+- A chapter opens with assessable learning outcomes and a prose problem
+  statement, never with a list of topics.
+- Code chunks are short, labelled, and surrounded by prose that says what is
+  about to happen and what the result means.
+- Figures are generated by the chapter's own code, referenced before they
+  appear, and interpreted after.
+- Code that cannot run at build time is marked as such and paired with output
+  that was genuinely captured.
+- Citations point only at entries that exist in `references.bib`.
+
+## Exercises {#sec-template-exercises}
+
+1. Recompute the genome-wide GC content using `Bio.SeqUtils.gc_fraction` and
+   confirm it matches the value computed by hand above.
+2. Redraw @fig-template-gc with a 2 kb window. Which features survive, and what
+   does that tell you about reporting window size in a methods section?
+3. The nucleocapsid gene lies at positions 28,274–29,533. Compute its GC content
+   and compare it with the genome-wide value.
+
+## Solutions {#sec-template-solutions}
+
+::: {.callout-caution collapse="true" title="Solutions"}
+
+**1.** The two routes agree to within rounding, which is the point of the check.
+
+```{python}
+#| label: soln-template-1
+from Bio.SeqUtils import gc_fraction
+print(f"{100 * gc_fraction(genome):.2f}%")
+```
+
+**2.** At 2 kb the windows span only 34% to 43%, and the 49% peak at 28.5 kb
+disappears altogether: the nucleocapsid gene is shorter than the window, so it is
+averaged together with its flanking sequence. The most striking feature of the first
+plot is invisible in the second. This is why a methods section must state the window
+size — the same data supports different-looking figures, and a reader cannot judge
+the claim without knowing the scale at which it was measured.
+
+**3.** The nucleocapsid gene is markedly GC-*richer* than the genome as a whole, which
+is the peak at the 3' end of @fig-template-gc rather than a dip. Check the direction
+of a deviation before interpreting it: it is easy to assume that an unusual region
+must be depleted.
+
+```{python}
+#| label: soln-template-3
+n_gene = genome[28273:29533]
+print(f"N gene GC: {100 * gc_fraction(n_gene):.2f}%  (genome: {100 * gc_fraction(genome):.2f}%)")
+```
+
+:::
+
+## Further reading {#sec-template-further-reading}
+
+- @cock2009 is the Biopython reference; the `SeqIO` and `SeqUtils` modules used
+  above are documented there and in the project's own tutorial.
+- @wilson2017 sets out the file layout and scripting habits this book's project
+  structure follows.
+- @sandve2013 is the shortest useful statement of what makes a computational
+  result reproducible, and is worth re-reading before submitting any analysis.

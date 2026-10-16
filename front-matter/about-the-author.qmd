@@ -1,0 +1,40 @@
+# About the author {.unnumbered}
+
+**Umar Ahmad, PhD**, is Senior Lecturer in the Department of Anatomy and the Human Genetics
+Informatics Unit, Faculty of Basic Medical Sciences, Sa'adu Zungur University, Bauchi,
+Nigeria, and Senior Technical Officer for Pathogen Genomics at the Africa Centres for
+Disease Control and Prevention. He took his PhD in human genetics and genomics at
+Universiti Putra Malaysia and the Malaysia Genome Institute, and has worked for more
+than twelve years across genomics research, bioinformatics and multi-country scientific
+collaboration in Africa.
+
+His research is in cancer genomics: transcriptome profiling of bladder and other
+urothelial cancers, using RNA-seq, single-cell RNA-seq, whole-genome and whole-exome
+sequencing to identify molecular drivers, therapeutic resistance and protein interaction
+networks, and the mechanisms by which oncolytic Newcastle disease virus establishes
+persistent infection in cancer cells.
+
+At Africa CDC he coordinates genomic surveillance, bioinformatics and workforce
+development across African Union Member States, and leads AGARI, the continental
+platform for pathogen genomic data sharing and public health intelligence. He has
+contributed to genomic surveillance strategies at both continental and national level,
+among them the Pathogen Genomic Surveillance Policy Framework, the roadmap for malaria
+genomic surveillance in Africa, the AC-GCAT genomics capacity assessment tool and its
+manual, and continental technical guidance on mpox testing and sequencing.
+
+In 2021 he founded BioSeq, a genomics and bioinformatics company built on four pillars:
+genomics, bioinformatics, artificial intelligence and capacity building. He also founded
+the Open Science Community Nigeria, which has since grown into the Open Science
+Community Network. He is an Academic Editor of PLOS ONE and of Applied Research, a
+member of the Bioconductor Community Advisory Board, a board member of the Directory of
+Open Access Journals and of the International Network of Open Science and Scholarship
+Communities, and a founding member both of the Nigerian Bioinformatics and Genomics
+Network and of the Community of Practice on Human Genomics and Genomic Medicine at the
+Africa Bioinformatics Institute.
+
+He teaches human genetics, bioinformatics and R programming, supervises postgraduate
+research, and has designed genomics and bioinformatics training for professionals across
+the continent. This book is a direct expression of the conviction that computational
+skills are learned by use.
+
+ORCID: [0000-0002-3216-5171](https://orcid.org/0000-0002-3216-5171)

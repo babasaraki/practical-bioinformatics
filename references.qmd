@@ -1,0 +1,18 @@
+# References {.unnumbered}
+
+Every work cited in this book is listed here. The bibliography is generated from
+`references.bib`, in which each entry was resolved against the Crossref or OpenAlex
+metadata registries and carries a registered DOI, except for the handful of works
+that have none — the JMLR articles, the R manual and the FastQC documentation — which
+are marked as such in the file.
+
+To rebuild the bibliography from scratch:
+
+```{.bash}
+python scripts/build_bibliography.py    # resolve against Crossref
+python scripts/resolve_openalex.py      # fill gaps using OpenAlex (needs an API key)
+python scripts/normalise_bibliography.py  # replace each entry with the publisher's own record
+```
+
+::: {#refs}
+:::

@@ -1,0 +1,28 @@
+# Acknowledgements {.unnumbered}
+
+This book rests on software and data that other people built and gave away. The
+analyses in these pages run on Biopython, NumPy, pandas, SciPy, Matplotlib,
+scikit-learn, R, the tidyverse and Bioconductor, and on command-line tools —
+BLAST+, MAFFT, BWA, SAMtools, BCFtools, Prodigal, SeqKit — maintained in many cases
+by very small teams for very little reward. The data comes from NCBI, EMBL-EBI,
+UniProt, the RCSB Protein Data Bank, the AlphaFold Protein Structure Database,
+STRING and ClinVar, all of which make their holdings freely available. The book
+itself is built with Quarto. Everyone who contributes to that ecosystem has a share
+in whatever is useful here.
+
+I am grateful to the students who worked through earlier versions of this material
+in classrooms and workshops in Nigeria and across the continent, and who were
+candid about the places where it did not work. Their confusion was more useful to me
+than their praise, and most of the rewriting in this edition was prompted by it.
+
+My thanks to colleagues at Sa'adu Zungur University, at the Africa Centres for
+Disease Control and Prevention, and in the Africa Bio Genome Project and H3Africa
+communities, whose work shaped my sense of what genomics in resource-limited
+settings actually requires. The emphasis in this book on small datasets, free tools
+and reproducible method comes directly from that experience.
+
+To the open science community in Nigeria, and to everyone who has argued with me
+about data sharing and benefit sharing: Chapter 14 is better for those arguments.
+
+Any errors that remain are mine. Corrections are welcome through the book's issue
+tracker and will be credited in later editions.

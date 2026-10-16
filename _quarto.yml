@@ -1,0 +1,224 @@
+project:
+  type: book
+  output-dir: _book
+  preview:
+    port: 4321
+    browser: false
+
+book:
+  title: "Practical Approach to Learning Bioinformatics"
+  # ORCID, contact e-mail and publisher imprint are intentionally left for the
+  # author to fill in before submission - see PRODUCTION.md.
+  author:
+    - name: "Umar Ahmad"
+      affiliations:
+        - name: "Department of Anatomy, Sa'adu Zungur University"
+          city: Bauchi
+          country: Nigeria
+  date: last-modified
+  date-format: "D MMMM YYYY"
+  edition: "First edition"
+  language: en-GB
+  reader-mode: true
+  search:
+    location: sidebar
+    type: textbox
+  sidebar:
+    style: docked
+    collapse-level: 1
+  cover-image: images/cover.jpg
+  cover-image-alt: "Cover of Practical Approach to Learning Bioinformatics"
+  favicon: images/favicon.png
+  site-url: https://babasaraki.github.io/practical-bioinformatics/
+  repo-url: https://github.com/babasaraki/practical-bioinformatics
+  repo-branch: main
+  repo-actions: [edit, issue, source]
+  downloads: [pdf, epub]
+  sharing: [twitter, linkedin]
+  page-footer:
+    left: |
+      *Practical Approach to Learning Bioinformatics* by Umar Ahmad.
+    center: |
+      Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+    right: |
+      Built with [Quarto](https://quarto.org/).
+
+  chapters:
+    - index.qmd
+
+    - part: "Front matter"
+      chapters:
+        - front-matter/foreword.qmd
+        - front-matter/preface.qmd
+        - front-matter/why-read-this-book.qmd
+        - front-matter/structure-of-the-book.qmd
+        - front-matter/how-to-use-this-book.qmd
+        - front-matter/about-the-author.qmd
+        - front-matter/acknowledgments.qmd
+
+    - part: "Foundations"
+      chapters:
+        - part1/01-introduction-to-bioinformatics.qmd
+        - part1/02-basic-concepts-of-molecular-biology.qmd
+
+    - part: "Biological data and databases"
+      chapters:
+        - part2/03-bioinformatics-databases.qmd
+
+    - part: "Sequence analysis"
+      chapters:
+        - part3/04-sequence-alignment-and-analysis.qmd
+
+    - part: "The bioinformatics toolchain"
+      chapters:
+        - part4/05-unix-linux-for-bioinformatics.qmd
+        - part4/06-introduction-to-python-for-bioinformatics.qmd
+        - part4/07-introduction-to-r-for-bioinformatics.qmd
+
+    - part: "Genomes, reads and structures"
+      chapters:
+        - part5/08-genome-annotation.qmd
+        - part5/09-ngs-data-analysis.qmd
+        - part5/10-structural-bioinformatics.qmd
+
+    - part: "Systems biology and data science"
+      chapters:
+        - part6/11-systems-biology-and-network-analysis.qmd
+        - part6/12-data-science-in-bioinformatics.qmd
+
+    - part: "Applications and responsible practice"
+      chapters:
+        - part7/13-bioinformatics-in-disease-and-healthcare.qmd
+        - part7/14-ethical-legal-and-social-issues-in-bioinformatics.qmd
+
+    - part: "Consolidation"
+      chapters:
+        - part8/15-practical-bioinformatics-project.qmd
+        - part8/16-chapter-summaries-and-review-questions.qmd
+
+  appendices:
+    - appendices/a-glossary.qmd
+    - appendices/b-software-environment.qmd
+    - appendices/c-bundled-datasets.qmd
+    - appendices/d-command-reference.qmd
+    - references.qmd
+
+bibliography: references.bib
+# Reference style. CRC Press/Taylor & Francis document the Chicago Manual of Style as
+# their house reference style, while allowing any style that is applied consistently
+# throughout a work; their current books guidance asks authors to confirm the expected
+# style with the commissioning editor. Chicago author-date is pandoc's built-in
+# default, so omitting `csl` selects it, and it emits DOIs, which T&F ask for wherever
+# available. `apa.csl` is kept in the repository: set `csl: apa.csl` to switch back.
+# csl: apa.csl
+
+crossref:
+  chapters: true
+  fig-title: Figure
+  tbl-title: Table
+  lst-title: Listing
+  fig-prefix: Figure
+  tbl-prefix: Table
+  sec-prefix: Section
+  eq-prefix: Equation
+
+engine: knitr
+
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+  error: false
+  cache: false
+
+knitr:
+  opts_chunk:
+    comment: "#>"
+    collapse: true
+    fig.align: center
+    dev: "png"
+    dpi: 300
+    fig.width: 6
+    fig.height: 4
+    out.width: "90%"
+
+format:
+  html:
+    theme:
+      light: [cosmo, scss/light.scss]
+      dark: [darkly, scss/dark.scss]
+    css: scss/extra.css
+    toc: true
+    toc-depth: 3
+    toc-title: "On this page"
+    number-sections: true
+    number-depth: 2
+    code-link: true
+    code-copy: true
+    code-overflow: wrap
+    code-fold: false
+    code-tools:
+      source: true
+      toggle: false
+    highlight-style: arrow
+    callout-appearance: simple
+    callout-icon: true
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    link-external-newwindow: true
+    link-external-icon: false
+    anchor-sections: true
+    smooth-scroll: true
+    author-meta: "Umar Ahmad"
+    description-meta: >-
+      A hands-on textbook that teaches bioinformatics by doing: sequence analysis,
+      databases, Unix, Python, R and Bioconductor, genome annotation, NGS and
+      RNA-seq, structural bioinformatics, networks, machine learning, clinical and
+      pathogen genomics, and the ethics of working with human genomic data.
+
+  typst:
+    # 6 x 9 in trim - the Chapman & Hall/CRC standard book size and an Amazon KDP
+    # paperback size. Rendered with Typst, which ships with Quarto, so the print
+    # PDF builds without a TeX installation. For a LaTeX manuscript (and for
+    # krantz.cls, which CRC supplies to contracted authors) use:
+    #     quarto render --profile latex
+    papersize: us-trade           # Typst's name for the 6 x 9 in trade book trim
+    margin:
+      top: 0.75in
+      bottom: 0.875in
+      x: 0.75in          # the binding-aware inside/outside split is set in tex/typst-header.typ
+    fontsize: 10pt
+    section-numbering: "1.1"
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    fig-format: png
+    keep-typ: true
+    # Quarto's own highlighter emits listings through a custom Typst function rather
+    # than as `raw` blocks, which puts them beyond the reach of any styling rule and
+    # leaves them justified. Turning it off hands highlighting to Typst itself, whose
+    # output is a real `raw` block that tex/typst-show.typ can style.
+    highlight-style: none
+    citeproc: true        # resolve citations with pandoc + the CSL style rather than
+                          # Typst's own bibliography engine, which cannot parse
+                          # every field the registration agencies return
+    include-in-header:
+      - tex/typst-header.typ
+    template-partials:
+      - tex/typst-show.typ
+
+  epub:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    cover-image: images/cover.jpg
+    css: scss/epub.css
+    epub-cover-image: images/cover.jpg
+    date: last-modified
+    fig-width: 5
+    fig-height: 3.5
+    code-overflow: wrap
+    epub-fonts: []
+
+editor: source

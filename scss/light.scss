@@ -1,0 +1,44 @@
+/*-- scss:defaults --*/
+// Practical Approach to Learning Bioinformatics - light theme
+$font-family-sans-serif: "Source Sans 3", "Source Sans Pro", -apple-system, "Segoe UI", Roboto, sans-serif !default;
+$font-family-monospace:  "Source Code Pro", "SFMono-Regular", Menlo, Consolas, monospace !default;
+$font-size-root: 17px !default;
+$line-height-base: 1.6 !default;
+
+$primary:   #1a5276 !default;   // deep teal-blue, used for links and chapter rules
+$secondary: #117864 !default;   // accent green, matches the series mark
+$body-color: #1f2328 !default;
+$body-bg: #ffffff !default;
+$code-bg: #f6f8fa !default;
+$code-color: #0b4f6c !default;
+$link-color: $primary !default;
+
+/*-- scss:rules --*/
+h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.01em; }
+h1.title { font-size: 2.1rem; }
+h2 { border-bottom: 1px solid #e3e6ea; padding-bottom: .3rem; margin-top: 2.2rem; }
+
+// Code
+pre.sourceCode { border-radius: 4px; border: 1px solid #e3e6ea; }
+code:not(.sourceCode) { background: $code-bg; padding: .1em .35em; border-radius: 3px; }
+
+// Callout tuning - the book uses five callout types consistently
+div.callout { border-radius: 4px; }
+div.callout-note    { border-left-color: $primary; }
+div.callout-tip     { border-left-color: $secondary; }
+div.callout-warning { border-left-color: #b9770e; }
+div.callout-important { border-left-color: #922b21; }
+
+// Learning objectives box at the head of every chapter
+.objectives {
+  background: #f4f8fb; border-left: 4px solid $primary;
+  padding: .9rem 1.1rem; border-radius: 4px; margin: 1.2rem 0 1.8rem 0;
+}
+.objectives > p:first-child { font-weight: 600; margin-bottom: .4rem; }
+
+// Figures and tables
+figcaption { font-size: .92rem; color: #5a6672; }
+table caption { font-size: .92rem; color: #5a6672; }
+
+// Exercises
+.exercise { border-left: 3px solid #d5d8dc; padding-left: .9rem; margin: 1rem 0; }

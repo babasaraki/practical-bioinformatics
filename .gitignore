@@ -1,0 +1,27 @@
+_book/
+.quarto/
+# _freeze/ is deliberately NOT ignored. Quarto's freeze cache holds the computed output
+# of every chunk, so a committed cache lets CI render the HTML site without R,
+# Bioconductor, BLAST, MAFFT, samtools or network access - and guarantees the published
+# site shows exactly the results the author verified. Re-running the chapters locally
+# updates it; commit the change with the chapter it belongs to.
+*.tex
+!tex/*.tex
+*.aux
+*.log
+*.toc
+*.out
+*.idx
+*.ilg
+*.ind
+.Rproj.user/
+.Rhistory
+.RData
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+site_libs/
+
+/.quarto/
+**/*.quarto_ipynb

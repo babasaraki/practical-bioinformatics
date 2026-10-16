@@ -1,0 +1,23 @@
+# Foreword {.unnumbered}
+
+::: {.content-visible when-format="html"}
+*This page is reserved for a foreword.*
+:::
+
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\

@@ -1,0 +1,107 @@
+# How to use this book {.unnumbered}
+
+## Conventions {.unnumbered}
+
+Code you type and output you receive are shown in monospaced blocks. Where a block
+shows a shell session, the command is given without a prompt character so that you
+can copy it directly:
+
+```{.bash}
+seqkit stats data/sequences/sars-cov-2-NC_045512.2.fasta
+```
+
+Blocks labelled with a language in braces — `{python}`, `{r}` — were executed when
+the book was built, and the output beneath them is exactly what that code produced.
+Blocks that are shown but not executed carry a note saying so, and their output was
+captured from a real run and quoted.
+
+Terms appear in **bold** at first definition and are collected in the glossary.
+File formats are capitalised (FASTA, FASTQ, SAM, BAM, VCF, GFF3). Human gene
+symbols are italic and upper case (*TP53*); the protein is roman (p53).
+
+Five kinds of marginal note appear:
+
+::: {.callout-note title="A definition or a pointer"}
+Background, a format detail, or a cross-reference to where something is covered
+properly.
+:::
+
+::: {.callout-tip title="Something worth doing"}
+A shortcut, a diagnostic command, or a habit that will save you time.
+:::
+
+::: {.callout-warning title="Something that will bite you"}
+A step where people commonly lose data, waste days, or silently get the wrong
+answer.
+:::
+
+::: {.callout-important title="An obligation"}
+Ethical, legal, clinical or biosafety requirements. These are rare, and they mean it.
+:::
+
+Solutions to exercises are in a collapsed block at the end of each chapter. Open
+them after you have tried the exercise, not before.
+
+## Setting up {.unnumbered}
+
+You need a Unix-like command line. On macOS and Linux you already have one. On
+Windows, install the Windows Subsystem for Linux (WSL2) and work inside it; a native
+Windows installation will cause problems that this book cannot help you with.
+
+Install [Miniforge](https://github.com/conda-forge/miniforge), then:
+
+```{.bash}
+git clone https://github.com/babasaraki/practical-bioinformatics
+cd practical-bioinformatics
+conda env create -f environment.yml
+conda activate pablb
+```
+
+That single environment contains every Python package, R package and command-line
+tool used anywhere in the book. Chapter 1 walks through the installation in detail
+and verifies it.
+
+## Getting the data {.unnumbered}
+
+```{.bash}
+python scripts/fetch_data.py
+python scripts/fetch_data.py --check
+```
+
+The first command downloads roughly 12 MB from NCBI, UniProt, RCSB PDB, AlphaFold
+DB, Bioconductor and STRING. The second verifies every file against the SHA-256
+checksums in `data/MANIFEST.tsv`, so you know your copy matches the one the book was
+written against. Appendix C lists each file, where it came from and what it is used
+for.
+
+Chapter code never contains a literal path. It calls a helper that locates the data
+directory from wherever you are working:
+
+```{.python}
+from pybfx import book_data
+book_data("proteins", "globins.fasta")
+```
+
+```{.r}
+book_data("proteins", "globins.fasta")
+```
+
+## If something does not work {.unnumbered}
+
+Check, in this order: that the environment is activated (`conda env list` shows a
+`*` beside `pablb`); that you are in the repository root; that
+`python scripts/fetch_data.py --check` reports no problems; and that your package
+versions match those in `environment.yml`. If the problem persists, the issue
+tracker on the repository is the right place to raise it, and a report that includes
+the command, the full error and your `conda list` output will be answered much
+faster than one that does not.
+
+## For instructors {.unnumbered}
+
+Each chapter is sized for one teaching session with the exercises as homework. The
+worked solutions are part of the text rather than a separate instructor's manual, on
+the view that students who look up an answer early learn more than students who
+cannot check their work at all. The question bank in Chapter 16 is graded by
+cognitive level and can be used for assessment. The whole book is openly licensed
+for non-commercial use, so chapters may be adapted for your own course provided the
+licence is preserved.

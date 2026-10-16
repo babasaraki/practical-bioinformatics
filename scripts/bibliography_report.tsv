@@ -1,0 +1,165 @@
+key	doi	year	match_score	resolved_title
+altschul1990	10.1016/s0022-2836(05)80360-2	1990	1.0	Basic local alignment search tool
+altschul1997	10.1093/nar/25.17.3389	1997	1.0	Gapped BLAST and PSI-BLAST: a new generation of protein database search programs
+amberger2019	10.1093/nar/gky1151	2018	0.908	OMIM.org: leveraging knowledge across phenotype–gene relationships
+anders2015htseq	10.1101/002824	2014	1.0	HTSeq – A Python framework to work with high-throughput sequencing data
+avsec2021	10.1101/2021.04.07.438649	2021	1.0	Effective gene expression prediction from sequence by integrating long-range interactions
+bankevich2012	10.1089/cmb.2012.0021	2012	1.0	SPAdes: A New Genome Assembly Algorithm and Its Applications to Single-Cell Sequencing
+barrett2013	10.1093/nar/gks1193	2012	0.907	NCBI GEO: archive for functional genomics data sets—update
+becht2019	10.1038/nbt.4314	2018	1.0	Dimensionality reduction for visualizing single-cell data using UMAP
+benjamini1995	10.1111/j.2517-6161.1995.tb02031.x	1995	1.0	Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testin
+berman2000	10.1093/nar/28.1.235	2000	1.0	The Protein Data Bank
+bolger2014	10.1093/bioinformatics/btu170	2014	1.0	Trimmomatic: a flexible trimmer for Illumina sequence data
+bray2016	10.1038/nbt.3519	2016	1.0	Near-optimal probabilistic RNA-seq quantification
+cantelli2022	10.1093/nar/gkaa1077	2020	1.0	The European Bioinformatics Institute: empowering cooperation in response to a global heal
+cerami2012	10.1158/2159-8290.cd-12-0095	2012	1.0	The cBio Cancer Genomics Portal: An Open Platform for Exploring Multidimensional Cancer Ge
+chen2018	10.1101/274100	2018	1.0	fastp
+                  : an ultra-fast all-in-one FASTQ preprocessor
+cho1994	10.1126/science.8023157	1994	1.0	Crystal Structure of a p53 Tumor Suppressor-DNA Complex: Understanding Tumorigenic Mutatio
+cock2009	10.1093/bioinformatics/btp163	2009	1.0	Biopython: freely available Python tools for computational molecular biology and bioinform
+danecek2011	10.1093/bioinformatics/btr330	2011	1.0	The variant call format and VCFtools
+danecek2021	10.1093/gigascience/giab008	2021	1.0	Twelve years of SAMtools and BCFtools
+depristo2011	10.1038/ng.806	2011	1.0	A framework for variation discovery and genotyping using next-generation DNA sequencing da
+ditommaso2017	10.1038/nbt.3820	2017	1.0	Nextflow enables reproducible computational workflows
+dobin2013	10.1093/bioinformatics/bts635	2012	1.0	STAR: ultrafast universal RNA-seq aligner
+eddy2011	10.1371/journal.pcbi.1002195	2011	1.0	Accelerated Profile HMM Searches
+edgar2004	10.1093/nar/gkh340	2004	1.0	MUSCLE: multiple sequence alignment with high accuracy and high throughput
+eraslan2019	10.1038/s41576-019-0122-6	2019	1.0	Deep learning: new computational modelling techniques for genomics
+erlich2014	10.1101/000042	2013	1.0	Routes for breaching and protecting genetic privacy
+ewels2016	10.1093/bioinformatics/btw354	2016	1.0	MultiQC: summarize analysis results for multiple tools and samples in a single report
+fastqc	no DOI registered		manual	hand-written entry - confirm at proof
+felsenstein1985	10.2307/2408678	1985	1.0	Confidence Limits on Phylogenies: An Approach Using the Bootstrap
+fiume2019	10.1038/s41587-019-0046-x	2019	1.0	Federated discovery and sharing of genomic data using Beacons
+gruning2018	10.1038/s41592-018-0046-7	2018	1.0	Bioconda: sustainable and comprehensive software distribution for the life sciences
+gurevich2013	10.1093/bioinformatics/btt086	2013	1.0	QUAST: quality assessment tool for genome assemblies
+gymrek2013	10.1126/science.1229566	2013	1.0	Identifying Personal Genomes by Surname Inference
+hadfield2018	10.1101/224048	2017	1.0	Nextstrain: real-time tracking of pathogen evolution
+henikoff1992	10.1073/pnas.89.22.10915	1992	1.0	Amino acid substitution matrices from protein blocks.
+homer2008	10.1371/journal.pgen.1000167	2008	1.0	Resolving Individuals Contributing Trace Amounts of DNA to Highly Complex Mixtures Using H
+hu2021	10.1038/s41579-020-00459-7	2020	1.0	Characteristics of SARS-CoV-2 and COVID-19
+huber2015	10.1038/nmeth.3252	2015	1.0	Orchestrating high-throughput genomic analysis with Bioconductor
+hunter2007	10.1109/mcse.2007.55	2007	1.0	Matplotlib: A 2D Graphics Environment
+hyatt2010	10.1186/1471-2105-11-119	2010	1.0	Prodigal: prokaryotic gene recognition and translation initiation site identification
+johnson2007	10.1093/biostatistics/kxj037	2006	1.0	Adjusting batch effects in microarray expression data using empirical Bayes methods
+kabsch1983	10.1002/bip.360221211	1983	0.929	Dictionary of protein secondary structure: Pattern recognition of hydrogen‐bonded and geom
+kanehisa2000	10.1093/nar/28.1.27	2000	1.0	KEGG: Kyoto Encyclopedia of Genes and Genomes
+karczewski2020	10.1530/ey.17.14.3	2020	1.0	The mutational constraint spectrum quantified from variation in 141,456 humans
+katoh2013	10.1093/molbev/mst010	2013	1.0	MAFFT Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usab
+kendrew1958	10.1038/181662a0	1958	1.0	A Three-Dimensional Model of the Myoglobin Molecule Obtained by X-Ray Analysis
+kim2019	10.1038/s41587-019-0201-4	2019	1.0	Graph-based genome alignment and genotyping with HISAT2 and HISAT-genotype
+knoppers2014	10.1186/s11568-014-0003-1	2014	1.0	Framework for responsible sharing of genomic and health-related data
+knuth1984	10.1093/comjnl/27.2.97	1984	1.0	Literate Programming
+kolmogorov2019	10.1101/247148	2018	1.0	Assembly of Long Error-Prone Reads Using Repeat Graphs
+koren2017	10.1101/071282	2016	1.0	Canu: scalable and accurate long-read assembly via adaptive
+                  k
+          
+koster2012	10.1093/bioinformatics/bts480	2012	0.872	Snakemake—a scalable bioinformatics workflow engine
+landrum2018	10.1093/nar/gkx1153	2017	1.0	ClinVar: improving access to variant interpretations and supporting evidence
+langmead2012	10.1038/nmeth.1923	2012	1.0	Fast gapped-read alignment with Bowtie 2
+lawrence2013	10.1371/journal.pcbi.1003118	2013	1.0	Software for Computing and Annotating Genomic Ranges
+lecun2015	10.1109/hotchips.2015.7477328	2015	1.0	Deep learning &amp; convolutional networks
+leek2010	10.1038/nrg2825	2010	1.0	Tackling the widespread and critical impact of batch effects in high-throughput data
+li2009bwa	10.1093/bioinformatics/btp324	2009	0.908	Fast and accurate short read alignment with Burrows–Wheeler transform
+liao2014	10.1093/bioinformatics/btt656	2013	1.0	featureCounts: an efficient general purpose program for assigning sequence reads to genomi
+liao2023	10.1530/ey.20.12.1	2023	1.0	A draft human pangenome reference
+libbrecht2015	10.1038/nrg3920	2015	1.0	Machine learning applications in genetics and genomics
+love2014	10.1101/002832	2014	1.0	Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2
+lowe1997	10.1093/nar/25.5.955	1997	1.0	tRNAscan-SE: A Program for Improved Detection of Transfer RNA Genes in Genomic Sequence
+maaten2008	no DOI registered		manual	hand-written entry - confirm at proof
+manni2021	10.1093/molbev/msab199	2021	1.0	BUSCO Update: Novel and Streamlined Workflows along with Broader and Deeper Phylogenetic C
+mckenna2010	10.1101/gr.107524.110	2010	1.0	The Genome Analysis Toolkit: A MapReduce framework for analyzing next-generation DNA seque
+minh2020	10.1101/849372	2019	1.0	IQ-TREE 2: New models and efficient methods for phylogenetic inference in the genomic era
+mistry2021	10.1093/nar/gkaa913	2020	1.0	Pfam: The protein families database in 2021
+needleman1970	10.1016/0022-2836(70)90057-4	1970	1.0	A general method applicable to the search for similarities in the amino acid sequence of t
+patro2017	10.1038/nmeth.4197	2017	1.0	Salmon provides fast and bias-aware quantification of transcript expression
+paysanlafosse2023	10.1093/nar/gkac993	2022	1.0	InterPro in 2022
+pearson1988	10.1073/pnas.85.8.2444	1988	1.0	Improved tools for biological sequence comparison.
+pedregosa2011	no DOI registered		manual	hand-written entry - confirm at proof
+perez2007	10.1109/mcse.2007.53	2007	1.0	IPython: A System for Interactive Scientific Computing
+pettersen2021	10.1002/pro.3943	2020	1.0	UCSF ChimeraX
+                    : Structure visualization for researchers, educators, an
+popejoy2016	10.1038/538161a	2016	1.0	Genomics is failing on diversity
+quick2017	10.1101/098913	2017	1.0	Multiplex PCR method for MinION and Illumina sequencing of Zika and other virus genomes di
+rambaut2020	10.1038/s41564-020-0770-5	2020	1.0	A dynamic nomenclature proposal for SARS-CoV-2 lineages to assist genomic epidemiology
+rcoreteam	no DOI registered		manual	hand-written entry - confirm at proof
+relling2015	10.1038/nature15817	2015	1.0	Pharmacogenomics in the clinic
+richards2015	10.1038/gim.2015.30	2015	1.0	Standards and guidelines for the interpretation of sequence variants: a joint consensus re
+ritchie2015	10.1093/nar/gkv007	2015	1.0	limma powers differential expression analyses for RNA-sequencing and microarray studies
+robinson2010	10.1093/bioinformatics/btp616	2009	1.0	edgeR
+                    : a Bioconductor package for differential expression analysis of
+robinson2011igv	10.1093/bib/bbs017	2012	1.0	Integrative Genomics Viewer (IGV): high-performance genomics data visualization and explor
+saitou1987	10.1093/oxfordjournals.molbev.a040454	1987	1.0	The neighbor-joining method: a new method for reconstructing phylogenetic trees.
+sandve2013	10.1371/journal.pcbi.1003285	2013	1.0	Ten Simple Rules for Reproducible Computational Research
+seemann2014	10.1093/bioinformatics/btu153	2014	1.0	Prokka: rapid prokaryotic genome annotation
+sherry2001	10.1093/nar/29.1.308	2001	1.0	dbSNP: the NCBI database of genetic variation
+sievers2011	10.1038/msb.2011.75	2011	0.935	Fast, scalable generation of high‐quality protein multiple sequence alignments using Clust
+sirugo2019	10.1016/j.cell.2019.04.032	2019	1.0	The Missing Diversity in Human Genetic Studies
+smith1981	10.1016/0022-2836(81)90087-5	1981	1.0	Identification of common molecular subsequences
+stamatakis2014	10.1093/bioinformatics/btu033	2014	1.0	RAxML version 8: a tool for phylogenetic analysis and post-analysis of large phylogenies
+stanke2006	10.1093/nar/gkl200	2006	1.0	AUGUSTUS: ab initio prediction of alternative transcripts
+storey2003	10.1073/pnas.1530509100	2003	1.0	Statistical significance for genomewide studies
+subramanian2005	10.1073/pnas.0506580102	2005	1.0	Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expr
+szklarczyk2023	10.1093/nar/gkac1000	2022	0.929	The STRING database in 2023: protein–protein association networks and functional enrichmen
+tamura2021	10.1093/molbev/msab120	2021	1.0	MEGA11: Molecular Evolutionary Genetics Analysis Version 11
+tatusova2016	10.1093/nar/gkw569	2016	1.0	NCBI prokaryotic genome annotation pipeline
+thompson1994	10.1093/nar/22.22.4673	1994	1.0	CLUSTAL W: improving the sensitivity of progressive multiple sequence alignment through se
+thorvaldsdottir2013	10.1093/bib/bbs017	2012	1.0	Integrative Genomics Viewer (IGV): high-performance genomics data visualization and explor
+trott2010	10.1002/jcc.21334	2009	1.0	AutoDock Vina: Improving the speed and accuracy of docking with a new scoring function, ef
+varadi2022	10.1093/nar/gkab1061	2021	1.0	AlphaFold Protein Structure Database: massively expanding the structural coverage of prote
+weinstein2013	10.1038/ng.2764	2013	1.0	The Cancer Genome Atlas Pan-Cancer analysis project
+wickham2019	10.21105/joss.01686	2019	1.0	Welcome to the Tidyverse
+wilson2017	10.1371/journal.pcbi.1005510	2017	1.0	Good enough practices in scientific computing
+wood2019	10.1101/762302	2019	1.0	Improved metagenomic analysis with Kraken 2
+xie2015	10.1201/b15166	2016	1.0	Dynamic Documents with R and knitr
+yu2012	10.1089/omi.2011.0118	2012	1.0	clusterProfiler: an R Package for Comparing Biological Themes Among Gene Clusters
+zou2019	10.1038/s41588-018-0295-5	2018	1.0	A primer on deep learning in genomics
+sayers2024	UNRESOLVED			best accepted match 0.00: none
+uniprot2023	UNRESOLVED			best accepted match 0.00: none
+burley2023	UNRESOLVED			best accepted match 0.84: RCSB Protein Data Bank: visualizing groups of experimentally determine
+cunningham2022	UNRESOLVED			best accepted match 0.00: none
+ashburner2000	UNRESOLVED			best accepted match 0.00: none
+go2023	UNRESOLVED			best accepted match 0.53: Gene ontology en la literatura de biociencias
+milacic2024	UNRESOLVED			best accepted match 0.00: none
+nurk2022	UNRESOLVED			best accepted match 0.73: First Complete Human Genome, For Real This Time
+lander2001	UNRESOLVED			best accepted match 0.68: International Human Genome Sequencing Consortium Publishes Sequence an
+venter2001	UNRESOLVED			best accepted match 0.79: International Human Genome Sequencing Consortium Publishes Sequence an
+jumper2021	UNRESOLVED			best accepted match 0.00: none
+baek2021	UNRESOLVED			best accepted match 0.00: none
+abramson2024	UNRESOLVED			best accepted match 0.00: none
+gentleman2004	UNRESOLVED			best accepted match 0.60: Bioinformatics and Computational Biology Solutions Using R and Biocond
+harris2020	UNRESOLVED			best accepted match 0.68: NumPy
+virtanen2020	UNRESOLVED			best accepted match 0.00: none
+wilkinson2016	UNRESOLVED			best accepted match 0.00: none
+1000g2015	UNRESOLVED			best accepted match 0.00: none
+tate2019	UNRESOLVED			best accepted match 0.64: Triaging PubMed literature to discover novel mutations for the Catalog
+alexandrov2020	UNRESOLVED			best accepted match 0.00: none
+robertson2017	UNRESOLVED			best accepted match 0.63: Molecular Subtypes of Non-muscle Invasive Bladder Cancer
+icgc2020	UNRESOLVED			best accepted match 0.78: Cancer Gets a Global Genomic Map: The Pan-Cancer Analysis of Whole Gen
+whirlcarrillo2021	UNRESOLVED			best accepted match 0.58: Scientific evidence and sources of knowledge for pharmacogenomics
+tegally2022	UNRESOLVED			best accepted match 0.48: Review for "Genomic monitoring of SARS-CoV-2 variants using sentinel S
+h3africa2014	UNRESOLVED			best accepted match 0.00: none
+uniprot2023	10.1093/nar/gkac1052	2022	1.0	UniProt: the Universal Protein Knowledgebase in 2023	OpenAlex
+burley2023	10.1093/nar/gkac1077	2022	1.0	RCSB Protein Data Bank (RCSB.org): delivery of experimentally-determined PDB structures al	OpenAlex
+cunningham2022	10.1093/nar/gkab1049	2021	1.0	Ensembl 2022	OpenAlex
+ashburner2000	10.1038/75556	2000	1.0	Gene Ontology: tool for the unification of biology	OpenAlex
+go2023	10.1093/genetics/iyad031	2023	1.0	The Gene Ontology knowledgebase in 2023	OpenAlex
+milacic2024	10.1093/nar/gkad1025	2023	1.0	The Reactome Pathway Knowledgebase 2024	OpenAlex
+nurk2022	10.1126/science.abj6987	2022	1.0	The complete sequence of a human genome	OpenAlex
+lander2001	10.1038/35057062	2001	1.0	Initial sequencing and analysis of the human genome	OpenAlex
+venter2001	10.1126/science.1058040	2001	1.0	The Sequence of the Human Genome	OpenAlex
+jumper2021	10.1038/s41586-021-03819-2	2021	1.0	Highly accurate protein structure prediction with AlphaFold	OpenAlex
+baek2021	10.1126/science.abj8754	2021	1.0	Accurate prediction of protein structures and interactions using a three-track neural netw	OpenAlex
+abramson2024	10.1038/s41586-024-07487-w	2024	1.0	Accurate structure prediction of biomolecular interactions with AlphaFold 3	OpenAlex
+gentleman2004	10.1186/gb-2004-5-10-r80	2004	1.0	Bioconductor: open software development for computational biology and bioinformatics	OpenAlex
+harris2020	10.1038/s41586-020-2649-2	2020	1.0	Array programming with NumPy	OpenAlex
+virtanen2020	10.17863/cam.64134	2019	1.0	SciPy 1.0: fundamental algorithms for scientific computing in Python	OpenAlex
+wilkinson2016	10.1038/sdata.2016.18	2016	1.0	The FAIR Guiding Principles for scientific data management and stewardship	OpenAlex
+1000g2015	10.1038/nature15393	2015	1.0	A global reference for human genetic variation	OpenAlex
+tate2019	10.1093/nar/gky1015	2018	1.0	COSMIC: the Catalogue Of Somatic Mutations In Cancer	OpenAlex
+alexandrov2020	10.1038/s41586-020-1943-3	2020	1.0	The repertoire of mutational signatures in human cancer	OpenAlex
+robertson2017	10.1016/j.cell.2017.09.007	2017	1.0	Comprehensive Molecular Characterization of Muscle-Invasive Bladder Cancer	OpenAlex
+icgc2020	10.1038/s41586-020-1969-6	2020	1.0	Pan-cancer analysis of whole genomes	OpenAlex
+tegally2022	10.1126/science.abq5358	2022	1.0	The evolving SARS-CoV-2 epidemic in Africa: Insights from rapidly expanding genomic survei	OpenAlex
+h3africa2014	10.1126/science.1251546	2014	1.0	Enabling the genomic revolution in Africa	OpenAlex
+sayers2024	STILL-UNRESOLVED			best match 0.00: none
+whirlcarrillo2021	STILL-UNRESOLVED			best match 0.00: none

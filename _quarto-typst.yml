@@ -1,0 +1,15 @@
+# Alternative print profile: render the 6 x 9 in interior with Typst instead of
+# LaTeX.  Useful when no TeX distribution is available, and fast enough to use
+# as a proofing loop.
+#   quarto render --profile typst
+format:
+  typst:
+    papersize: us-letter
+    margin:
+      x: 0.75in
+      y: 0.85in
+    fontsize: 10pt
+    section-numbering: "1.1"
+    toc: true
+    toc-depth: 2
+    keep-typ: true

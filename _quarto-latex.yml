@@ -1,0 +1,53 @@
+# Print profile for LaTeX output.
+#
+#   quarto render --profile latex
+#
+# Requires a TeX installation (TinyTeX is enough: `quarto install tinytex`).
+# To typeset in the publisher's own class, obtain krantz.cls from CRC, place it
+# beside this file and change `documentclass` below to `krantz`; the geometry and
+# KOMA-specific blocks in tex/preamble.tex should then be commented out, as noted
+# in that file.
+format:
+  pdf:
+    documentclass: scrbook
+    classoption:
+      - twoside
+      - open=right
+      - numbers=noenddot
+      - headings=normal
+      - chapterprefix=false
+      - BCOR=5mm
+      - DIV=calc
+    papersize: a5          # overridden by the geometry settings below (6in x 9in trim)
+    geometry:
+      - paperwidth=6in
+      - paperheight=9in
+      - inner=0.875in
+      - outer=0.625in
+      - top=0.75in
+      - bottom=0.875in
+      - headsep=0.25in
+      - footskip=0.4in
+    fontsize: 10pt
+    linestretch: 1.08
+    number-sections: true
+    number-depth: 2
+    toc: true
+    toc-depth: 1
+    lof: false
+    lot: false
+    colorlinks: true
+    linkcolor: crcblue
+    citecolor: crcblue
+    urlcolor: crcblue
+    code-block-bg: "#f5f5f5"
+    code-block-border-left: "#b0b0b0"
+    highlight-style: arrow
+    fig-pos: "tbp"
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    keep-tex: true
+    cite-method: citeproc
+    include-in-header: tex/preamble.tex
+    include-before-body: tex/before-body.tex
+

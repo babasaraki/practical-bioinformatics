@@ -1,0 +1,59 @@
+# Conda environment for building and running every example in
+# "Practical Approach to Learning Bioinformatics".
+#   conda env create -f environment.yml
+#   conda activate pablb
+name: pablb
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # --- build toolchain ---
+  - python=3.11
+  - quarto>=1.5
+  - jupyter
+  - nbformat
+  - nbclient
+  # --- Python analysis stack ---
+  - biopython>=1.83
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - networkx
+  - scikit-learn
+  - statsmodels
+  - pysam
+  - requests
+  # read back the rendered PDF in scripts/check_pdf_layout.py
+  - pypdfium2
+  # --- R and Bioconductor ---
+  - r-base>=4.3
+  - r-knitr
+  - r-rmarkdown
+  - r-tidyverse
+  - r-igraph
+  - r-ape
+  - r-pheatmap
+  - r-ggrepel
+  - r-patchwork
+  - r-here
+  - bioconductor-biostrings
+  - bioconductor-genomicranges
+  - bioconductor-summarizedexperiment
+  - bioconductor-rtracklayer
+  - bioconductor-deseq2
+  - bioconductor-edger
+  - bioconductor-limma
+  - bioconductor-variantannotation
+  # --- command-line bioinformatics tools used in the shell chapters ---
+  - blast
+  - mafft
+  - samtools
+  - bcftools
+  - bwa
+  - bowtie2
+  - fastqc
+  - multiqc
+  - seqkit
+  - prodigal

@@ -1,0 +1,133 @@
+# Command and function reference {#sec-appendix-reference}
+
+A lookup table for the commands and functions used in the book. It is deliberately
+short: these are the things you will reach for repeatedly, not everything that exists.
+Chapter cross-references point to where each is introduced properly.
+
+## Unix {#sec-ref-unix}
+
+### Navigation and files
+
+| Command | Does |
+|---|---|
+| `pwd` | print the current directory |
+| `ls -lh` | list files with sizes in human units |
+| `cd -` | return to the previous directory |
+| `mkdir -p a/b/c` | create nested directories without complaint |
+| `cp -r`, `mv`, `rm -i` | copy recursively, move/rename, remove with confirmation |
+| `du -sh *` | size of each entry in the current directory |
+| `df -h` | free space per filesystem |
+| `find . -name "*.fastq.gz"` | locate files by pattern |
+| `ln -s target link` | symbolic link, to avoid duplicating large files |
+
+### Viewing and text processing
+
+| Command | Does |
+|---|---|
+| `less -S file` | page through without wrapping long lines |
+| `head -n 8`, `tail -n 20`, `tail -f` | first lines, last lines, follow a growing file |
+| `wc -l` | count lines |
+| `cut -f 1,4,5` | select columns from a tab-delimited file |
+| `sort -k2,2n`, `sort -u` | sort numerically on column 2; unique sort |
+| `uniq -c` | count adjacent duplicates (sort first) |
+| `grep -c "^>"` | count FASTA records |
+| `grep -v "^#"` | drop header lines |
+| `awk -F'\t' '$3=="gene"'` | filter rows by a column value |
+| `awk '{s+=$2} END {print s}'` | sum a column |
+| `sed 's/old/new/g'` | substitute throughout |
+| `tr -d '\r'` | strip carriage returns from Windows files |
+| `paste`, `join -t$'\t' -1 1 -2 1` | combine files column-wise; join on a key |
+
+### Compression, streams and jobs
+
+| Command | Does |
+|---|---|
+| `zcat f.gz \| head` | read a compressed file without decompressing it |
+| `gzip -c`, `bgzip`, `tabix -p vcf` | compress; block-compress; index for random access |
+| `cmd > out 2> err`, `cmd &> all` | redirect stdout and stderr |
+| `cmd1 \| cmd2`, `tee file` | pipe; pipe while also writing to a file |
+| `set -euo pipefail` | make a script fail loudly instead of silently |
+| `nohup cmd &`, `tmux new -s work` | keep a job alive after logout |
+| `xargs -n1 -P4 cmd` | run a command over many inputs, four at a time |
+| `sbatch job.sh`, `squeue -u $USER` | submit and monitor a SLURM job |
+
+## Command-line bioinformatics tools {#sec-ref-tools}
+
+| Command | Does |
+|---|---|
+| `seqkit stats *.fasta` | sequence counts, lengths, N50, GC in one table |
+| `seqkit grep -p ID`, `seqkit subseq -r 100:200` | extract records or regions |
+| `makeblastdb -in f.fasta -dbtype prot` | build a local BLAST database |
+| `blastp -query q.fa -db db -outfmt 6 -evalue 1e-5` | protein search, tabular output |
+| `blastn -task megablast` | nucleotide search for similar sequences |
+| `mafft --auto in.fasta > out.aln` | multiple sequence alignment |
+| `prodigal -i genome.fna -a proteins.faa -f gff` | prokaryotic gene prediction |
+| `bwa index ref.fa`, `bwa mem ref.fa r1.fq r2.fq` | index a reference; align paired reads |
+| `samtools sort -o s.bam`, `samtools index` | sort and index an alignment file |
+| `samtools view -c -F 4`, `samtools flagstat` | count mapped reads; alignment summary |
+| `samtools depth`, `samtools faidx ref.fa chr:1-100` | per-base depth; extract a region |
+| `bcftools mpileup -f ref.fa a.bam \| bcftools call -mv` | call variants |
+| `bcftools view -i 'QUAL>30'`, `bcftools stats` | filter a VCF; summarise it |
+| `fastqc *.fastq.gz`, `multiqc .` | per-file quality reports; combined report |
+
+## Python {#sec-ref-python}
+
+| Call | Does |
+|---|---|
+| `SeqIO.parse(path, "fasta")` | iterate over sequence records |
+| `SeqIO.read(path, "genbank")` | read a single-record file |
+| `record.seq.reverse_complement()` | reverse complement |
+| `record.seq.translate(table=11)` | translate with a chosen genetic code |
+| `gc_fraction(seq)` | GC content as a fraction |
+| `PairwiseAligner()`, `aligner.align(a, b)` | pairwise alignment (replaces `pairwise2`) |
+| `substitution_matrices.load("BLOSUM62")` | load a scoring matrix |
+| `DistanceCalculator("identity")`, `DistanceTreeConstructor()` | distance matrix and tree |
+| `PDBParser().get_structure(id, path)` | parse a PDB file |
+| `Superimposer()` | superpose two sets of atoms and report RMSD |
+| `pd.read_csv(path, sep="\t", comment="#")` | read a tab-delimited file with comments |
+| `df.query(...)`, `df.groupby(...).agg(...)` | filter; split-apply-combine |
+| `df.merge(other, on="gene", how="left")` | join two tables |
+| `np.percentile`, `np.log2`, `arr.mean(axis=0)` | array statistics |
+| `scipy.stats.hypergeom.sf(k-1, M, n, N)` | enrichment p-value |
+| `statsmodels.stats.multitest.multipletests(p, method="fdr_bh")` | FDR correction |
+| `StandardScaler()`, `PCA(n_components=2)` | scale features; principal components |
+| `cross_val_score(model, X, y, cv=StratifiedKFold(5))` | honest performance estimate |
+| `Pipeline([...])` | keep preprocessing inside cross-validation |
+
+## R and Bioconductor {#sec-ref-r}
+
+| Call | Does |
+|---|---|
+| `read_tsv()`, `read_csv()` | read delimited files as tibbles |
+| `filter()`, `select()`, `mutate()`, `arrange()` | the core dplyr verbs |
+| `group_by() |> summarise()` | split-apply-combine |
+| `left_join(x, y, by = "gene")` | join two tables |
+| `pivot_longer()`, `pivot_wider()` | reshape between wide and tidy forms |
+| `ggplot(df, aes(x, y)) + geom_point() + facet_wrap(~g)` | the grammar of graphics |
+| `readDNAStringSet(path)`, `reverseComplement()`, `translate()` | Biostrings sequence work |
+| `letterFrequency(x, "GC", as.prob = TRUE)` | base composition |
+| `GRanges(seqnames, IRanges(start, end), strand)` | genomic intervals |
+| `findOverlaps()`, `countOverlaps()`, `reduce()` | interval arithmetic |
+| `import("annotation.gff")` | read annotation with rtracklayer |
+| `SummarizedExperiment(assays, colData, rowData)` | assay container |
+| `DESeqDataSetFromMatrix(counts, colData, ~ condition)` | build a DESeq2 dataset |
+| `DESeq()`, `results(dds, alpha = 0.05)` | fit and extract differential expression |
+| `lfcShrink()`, `plotMA()`, `vst()` | shrink fold changes; MA plot; variance-stabilise |
+| `readVcf(path, "hg38")`, `info()`, `geno()` | VCF access with VariantAnnotation |
+| `graph_from_data_frame()`, `degree()`, `betweenness()` | igraph network measures |
+| `cluster_louvain()`, `cluster_fast_greedy()` | community detection |
+| `phyper()`, `p.adjust(p, "BH")` | hypergeometric test; FDR correction |
+| `sessionInfo()` | record the environment in your report |
+
+## Git {#sec-ref-git}
+
+| Command | Does |
+|---|---|
+| `git init`, `git clone url` | start or copy a repository |
+| `git status`, `git diff` | what changed |
+| `git add -p` | stage changes selectively, reviewing each |
+| `git commit -m "message"` | record a change with its reason |
+| `git log --oneline --graph` | history |
+| `git checkout -b feature` | start a branch |
+| `git restore --source=HEAD~1 file` | recover an earlier version of a file |
+| `.gitignore` | keep data, caches and credentials out of the repository |

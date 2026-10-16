@@ -1,0 +1,107 @@
+# The software environment {#sec-appendix-software}
+
+Everything in this book runs inside one conda environment defined by
+`environment.yml`. This appendix explains what is in it, how to install it on each
+platform, and what to do when something breaks.
+
+## Installing {#sec-env-install}
+
+Install [Miniforge](https://github.com/conda-forge/miniforge) — a minimal conda
+distribution configured for the conda-forge channel — then:
+
+```{.bash}
+git clone https://github.com/babasaraki/practical-bioinformatics
+cd practical-bioinformatics
+conda env create -f environment.yml
+conda activate pablb
+```
+
+The solve takes several minutes and downloads roughly 2 GB. If it is slow, install
+`mamba` (`conda install -n base -c conda-forge mamba`) and substitute `mamba env
+create`, which resolves dependencies considerably faster.
+
+::: {.callout-warning title="Windows users: work inside WSL2"}
+Several of the command-line tools used in Part V have no native Windows build. Install
+the Windows Subsystem for Linux (`wsl --install` in an administrator PowerShell),
+install Miniforge *inside* the Linux environment, and clone the repository there. Do
+not clone into `/mnt/c/...` and work across the boundary: file permissions and line
+endings will cause problems that look like bioinformatics problems.
+:::
+
+## What is in the environment {#sec-env-contents}
+
+**Build toolchain** — `quarto`, `jupyter`, `nbformat`, `nbclient`. Quarto executes the
+code in each chapter and assembles the book; the Jupyter packages are what it uses to
+run Python chunks.
+
+**Python analysis stack** — `biopython` for sequence, structure and database work;
+`numpy` and `pandas` for arrays and tabular data; `scipy` and `statsmodels` for
+statistics; `matplotlib` and `seaborn` for figures; `scikit-learn` for machine
+learning; `networkx` for graphs; `pysam` for SAM/BAM/VCF access; `requests` for
+HTTP APIs.
+
+**R and Bioconductor** — `r-base`, `r-knitr` and `r-rmarkdown` for execution;
+`r-tidyverse` for data manipulation and ggplot2; `r-igraph` for networks; `r-ape` for
+phylogenetics; `r-pheatmap`, `r-ggrepel` and `r-patchwork` for figures. From
+Bioconductor: `Biostrings` (sequences), `GenomicRanges` (intervals),
+`SummarizedExperiment` (assay containers), `rtracklayer` (genome annotation I/O),
+`DESeq2`, `edgeR` and `limma` (differential expression), and `VariantAnnotation`
+(VCF).
+
+**Command-line tools** — `blast` (BLAST+), `mafft` (multiple alignment), `bwa` and
+`bowtie2` (read alignment), `samtools` and `bcftools` (alignment and variant files),
+`fastqc` and `multiqc` (quality control), `seqkit` (sequence manipulation), and
+`prodigal` (prokaryotic gene prediction).
+
+## Checking the installation {#sec-env-check}
+
+```{.bash}
+python -c "import Bio, pandas, numpy, sklearn, pysam; print('python stack ok')"
+Rscript -e 'library(DESeq2); library(tidyverse); cat("r stack ok\n")'
+blastn -version && mafft --version && samtools --version | head -1
+python scripts/fetch_data.py --check
+```
+
+If all four commands succeed you can run every executable example in the book.
+
+## Recording the environment in your own work {#sec-env-record}
+
+An analysis is only reproducible if the software is pinned. Record the environment
+alongside your results, every time:
+
+```{.bash}
+conda env export --no-builds > environment.yml   # portable across platforms
+conda list --explicit > environment-lock.txt     # exact, platform-specific
+```
+
+In R, `sessionInfo()` (or `sessioninfo::session_info()`) belongs at the end of every
+analysis report; in Python, `pip freeze` or `conda list` serves the same purpose.
+Chapter 15 treats this as part of the deliverable rather than an afterthought.
+
+## Containers {#sec-env-containers}
+
+For work that must run identically on a cluster or in a reviewer's hands, a container
+is stronger than an environment file, because it pins the operating system as well.
+A minimal image for this book:
+
+```{.bash}
+# Dockerfile
+FROM condaforge/miniforge3:latest
+COPY environment.yml /tmp/environment.yml
+RUN conda env create -f /tmp/environment.yml && conda clean -afy
+SHELL ["conda", "run", "-n", "pablb", "/bin/bash", "-c"]
+```
+
+The Bioconda and BioContainers projects publish per-tool images for most of the
+command-line software used here, which is usually easier than building your own.
+
+## When something breaks {#sec-env-troubleshooting}
+
+| Symptom | Usual cause and fix |
+|---|---|
+| `command not found` | The environment is not activated. `conda activate pablb`. |
+| `ModuleNotFoundError` | A second Python is shadowing the environment. Check `which python`. |
+| R cannot find a package | R was started outside the environment, or a user library is taking precedence. Check `.libPaths()`. |
+| Conda solve hangs | Use `mamba`, and make sure `conda-forge` and `bioconda` are both in the channel list, in that order. |
+| A tool is missing on macOS ARM | Some bioconda builds are x86-only. Create the environment with `CONDA_SUBDIR=osx-64` to run under Rosetta 2. |
+| Checksum mismatch from `--check` | The archive updated the record. Re-run `fetch_data.py`; if a file genuinely changed upstream, the manifest entry needs regenerating. |

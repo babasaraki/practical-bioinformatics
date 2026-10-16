@@ -1,0 +1,93 @@
+name: Render and publish the book
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write          # the publish step pushes the built site to gh-pages
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # The website. Fast, and deliberately free of the analysis toolchain: the
+  # committed _freeze cache already holds every chunk's computed output, so Quarto
+  # renders the HTML without executing anything. That means no conda, no R, no
+  # Bioconductor, no BLAST and no network calls to public archives on every push -
+  # and it guarantees the published site shows exactly the results the author
+  # verified, rather than whatever the services happen to return today.
+  # ---------------------------------------------------------------------------
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+        # No tinytex: the print edition is built with Typst, which ships inside Quarto.
+
+      - name: Fail early if the freeze cache is missing
+        run: |
+          test -d _freeze || {
+            echo "::error::_freeze is not committed, so the site cannot be rendered"
+            echo "without the full analysis toolchain. Render locally and commit it."
+            exit 1
+          }
+
+      - name: Check the manuscript
+        run: python3 scripts/check_manuscript.py
+
+      - name: Render the HTML edition
+        run: quarto render --to html
+
+      - name: Publish to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          render: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # ---------------------------------------------------------------------------
+  # The full build: every chunk executed from scratch against freshly fetched data,
+  # and all three formats produced. This is the check that the book is genuinely
+  # reproducible, so it is run on demand rather than on every push - it needs the
+  # whole toolchain and it talks to public archives.
+  # ---------------------------------------------------------------------------
+  reproduce:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up the conda environment
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: pablb
+          miniforge-version: latest
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Fetch the bundled data and verify its checksums
+        run: |
+          python scripts/fetch_data.py
+          python scripts/fetch_data.py --check
+
+      - name: Render HTML, PDF and EPUB from scratch
+        run: quarto render --cache-refresh
+
+      - name: Check the rendered print PDF
+        run: python scripts/check_pdf_layout.py _book/*.pdf
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: book
+          path: |
+            _book/*.pdf
+            _book/*.epub

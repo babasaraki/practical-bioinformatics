@@ -2,126 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/index.html</loc>
-    <lastmod>2026-10-17T06:14:46.164Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/front-matter/dedication.html</loc>
-    <lastmod>2026-10-16T09:32:25.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://babasaraki.github.io/practical-bioinformatics/front-matter/foreword.html</loc>
-    <lastmod>2026-10-17T06:14:46.162Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/front-matter/preface.html</loc>
-    <lastmod>2026-10-17T06:14:46.162Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/front-matter/why-read-this-book.html</loc>
-    <lastmod>2026-10-17T06:14:46.162Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/front-matter/structure-of-the-book.html</loc>
-    <lastmod>2026-10-17T06:14:46.162Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/front-matter/how-to-use-this-book.html</loc>
-    <lastmod>2026-10-17T06:14:46.162Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/front-matter/about-the-author.html</loc>
-    <lastmod>2026-10-17T06:14:46.161Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/front-matter/acknowledgments.html</loc>
-    <lastmod>2026-10-17T06:14:46.162Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part1/01-introduction-to-bioinformatics.html</loc>
-    <lastmod>2026-10-17T06:14:46.170Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part1/02-basic-concepts-of-molecular-biology.html</loc>
-    <lastmod>2026-10-17T06:14:46.170Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part2/03-bioinformatics-databases.html</loc>
-    <lastmod>2026-10-17T06:14:46.172Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part3/04-sequence-alignment-and-analysis.html</loc>
-    <lastmod>2026-10-17T06:14:46.172Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part4/05-unix-linux-for-bioinformatics.html</loc>
-    <lastmod>2026-10-17T06:14:46.172Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part4/06-introduction-to-python-for-bioinformatics.html</loc>
-    <lastmod>2026-10-17T06:14:46.172Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part4/07-introduction-to-r-for-bioinformatics.html</loc>
-    <lastmod>2026-10-17T06:14:46.172Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part5/08-genome-annotation.html</loc>
-    <lastmod>2026-10-17T06:14:46.173Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part5/09-ngs-data-analysis.html</loc>
-    <lastmod>2026-10-17T06:14:46.173Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part5/10-structural-bioinformatics.html</loc>
-    <lastmod>2026-10-17T06:14:46.173Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part6/11-systems-biology-and-network-analysis.html</loc>
-    <lastmod>2026-10-17T06:14:46.173Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part6/12-data-science-in-bioinformatics.html</loc>
-    <lastmod>2026-10-17T06:14:46.174Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part7/13-bioinformatics-in-disease-and-healthcare.html</loc>
-    <lastmod>2026-10-17T06:14:46.174Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part7/14-ethical-legal-and-social-issues-in-bioinformatics.html</loc>
-    <lastmod>2026-10-17T06:14:46.174Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part8/15-practical-bioinformatics-project.html</loc>
-    <lastmod>2026-10-17T06:14:46.174Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/part8/16-chapter-summaries-and-review-questions.html</loc>
-    <lastmod>2026-10-17T06:14:46.174Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/appendices/a-glossary.html</loc>
-    <lastmod>2026-10-17T06:14:46.136Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/appendices/b-software-environment.html</loc>
-    <lastmod>2026-10-17T06:14:46.136Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/appendices/c-bundled-datasets.html</loc>
-    <lastmod>2026-10-17T06:14:46.136Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/appendices/d-command-reference.html</loc>
-    <lastmod>2026-10-17T06:14:46.136Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/references.html</loc>
-    <lastmod>2026-10-17T06:14:46.175Z</lastmod>
+    <lastmod>2026-10-17T07:06:49.000Z</lastmod>
   </url>
   <url>
     <loc>https://babasaraki.github.io/practical-bioinformatics/Practical-Approach-to-Learning-Bioinformatics.epub</loc>
-    <lastmod>2026-10-17T07:57:32.970Z</lastmod>
+    <lastmod>2026-10-17T08:07:24.658Z</lastmod>
   </url>
 </urlset>

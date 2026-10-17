@@ -5,7 +5,10 @@ $font-family-monospace:  "Source Code Pro", "SFMono-Regular", Menlo, Consolas, m
 $font-size-root: 17px !default;
 $line-height-base: 1.6 !default;
 
-$primary:   #1a5276 !default;   // deep teal-blue, used for links and chapter rules
+// Accent sampled from the gold band on the cover artwork, then darkened until it
+// clears 4.5:1 against white (WCAG AA for body text). Sampled value #b17d35,
+// shipped value #9a6d2e at 4.56:1.
+$primary:   #9a6d2e !default;   // cover bronze, used for links and chapter rules
 $secondary: #117864 !default;   // accent green, matches the series mark
 $body-color: #1f2328 !default;
 $body-bg: #ffffff !default;
@@ -31,10 +34,17 @@ div.callout-important { border-left-color: #922b21; }
 
 // Learning objectives box at the head of every chapter
 .objectives {
-  background: #f4f8fb; border-left: 4px solid $primary;
+  background: #faf6f0; border-left: 4px solid $primary;
   padding: .9rem 1.1rem; border-radius: 4px; margin: 1.2rem 0 1.8rem 0;
 }
 .objectives > p:first-child { font-weight: 600; margin-bottom: .4rem; }
+
+// Links: coloured and underlined, so they are findable without relying on colour
+// alone - the convention the free online editions of technical books follow.
+a { text-decoration: underline; text-underline-offset: .15em; }
+a:hover { color: darken($primary, 12%); }
+.sidebar a, .navbar a, .toc-actions a, a.quarto-navigation-tool,
+nav[role="doc-toc"] a, .quarto-title-block a { text-decoration: none; }
 
 // Figures and tables
 figcaption { font-size: .92rem; color: #5a6672; }

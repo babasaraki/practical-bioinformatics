@@ -8,8 +8,8 @@ time; every number below was read off the build rather than estimated.
 
 | Output | Detail |
 |---|---|
-| HTML book | 28 pages, 100 generated figures, full-text search, syntax highlighting, light and dark themes |
-| Print PDF | 593 pages, every page measured at exactly 6.00 × 9.00 in, cover as page one, 13.0 MB |
+| HTML book | 29 pages, 100 generated figures, full-text search, syntax highlighting, light and dark themes |
+| Print PDF | 592 pages, every page measured at exactly 6.00 × 9.00 in, cover as page one, 13.0 MB |
 | EPUB | 8.1 MB, 87 files, cover embedded |
 
 All three are produced by a single `quarto render`. Rendering one format at a time
@@ -97,7 +97,7 @@ two characters on different lines collide, and that nothing is set below the bot
 margin. On the shipped PDF all three pass:
 
 ```
-593 pages | page sizes found (in): [(6.0, 9.0)]
+592 pages | page sizes found (in): [(6.0, 9.0)]
 
 PASS  every page is 6.0 x 9.0 in
 PASS  no overlapping text

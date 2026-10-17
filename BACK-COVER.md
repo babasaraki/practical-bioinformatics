@@ -51,6 +51,23 @@ sentence stands alone if the designer cuts it.
 
 ## Reserved areas, which must stay clear
 
+## Photograph
+
+`images/author-photo.jpg` is the supplied studio portrait (frame 2V2A9964), rotated
+upright from its EXIF orientation and cropped head-and-shoulders to the box's 1.05:1.24
+aspect, with the head filling about 55% of the frame and the surplus taken mostly from
+below so the portrait keeps its headroom. Stored at 2094 x 2473 px, which is 1994 dpi
+at the printed size — six times what print needs, so there is room to re-crop.
+
+It was chosen over the two alternatives for the cover specifically: the studio backdrop
+is close to the cover's own light grey ground, so the portrait sits on the page instead
+of punching a hole in it, and the expression is open rather than formal, which suits a
+book about learning. The lobby photograph has a dark warm background that fights the
+grey, and the second studio frame (2V2A9965) is a shade more severe.
+
+A keyline in the cover's gold is drawn inside the portrait's edge, so it reads as placed
+rather than dropped in.
+
 - **Barcode.** Amazon KDP overprints a barcode in a 2.0 × 1.2 in box at the bottom right
   of the back cover. The template leaves that box white. Do not place art or text in it;
   a dark background behind a barcode is a scanning failure.
@@ -62,8 +79,8 @@ sentence stands alone if the designer cuts it.
 | | |
 |---|---|
 | Trim | 6 × 9 in |
-| Extent | 592 pages |
-| Spine | 592 × 0.002252 = **1.333 in (33.9 mm)**, black ink on white paper |
+| Extent | 591 pages (interior, cover plate excluded) |
+| Spine | 591 × 0.002252 = **1.331 in (33.8 mm)**, black ink on white paper. The wrap in this package was rendered for 592 pp; regenerate it with `--pages` once a publisher confirms the final extent. |
 | Full wrap, with bleed | 13.583 × 9.25 in = **4075 × 2775 px at 300 dpi** |
 | Back panel, with bleed | 6.125 × 9.25 in = 1838 × 2775 px |
 

@@ -1,0 +1,56 @@
+# Dedication {.unnumbered}
+
+::: {.content-visible when-format="typst"}
+
+```{=typst}
+#v(1.2em)
+#align(center)[
+  #emph[This work is specially dedicated to:]
+  #v(1.5em)
+  #emph[In loving memory of]
+  #v(0.5em)
+  #strong[Malama Nafisa Alkali Abbas], my mother \
+  #strong[Malam Ahmad Muhammadu Lamido], my father \
+  #strong[Alhaji Kabiru Ahmad], Walin Gabas of Misau, my elder brother
+  #v(1.5em)
+  #strong[Hajiya Nafisa Ahmad Isa], my wife \
+  and our son, #strong[Ahmad Umar Ahmad]
+  #v(1.5em)
+  #emph[and in appreciation of]
+  #v(0.5em)
+  #strong[Professor Muhammad Ali Pate, CON, mni, FAS, FAMedS] \
+  Honourable Coordinating Minister of Health and Social Welfare, Nigeria
+  #v(0.9em)
+  #strong[His Royal Highness Alhaji Ahmed Sulaiman, mni] \
+  Emir of Misau
+]
+```
+
+:::
+
+::: {.content-hidden when-format="typst"}
+
+::: {.dedication}
+
+*This work is specially dedicated to:*
+
+*In loving memory of*
+
+**Malama Nafisa Alkali Abbas**, my mother\
+**Malam Ahmad Muhammadu Lamido**, my father\
+**Alhaji Kabiru Ahmad**, Walin Gabas of Misau, my elder brother
+
+**Hajiya Nafisa Ahmad Isa**, my wife\
+and our son, **Ahmad Umar Ahmad**
+
+*and in appreciation of*
+
+**Professor Muhammad Ali Pate, CON, mni, FAS, FAMedS**\
+Honourable Coordinating Minister of Health and Social Welfare, Nigeria
+
+**His Royal Highness Alhaji Ahmed Sulaiman, mni**\
+Emir of Misau
+
+:::
+
+:::

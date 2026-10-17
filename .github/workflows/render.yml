@@ -38,6 +38,10 @@ jobs:
       - name: Check the manuscript
         run: python3 scripts/check_manuscript.py
 
+      # HTML only. The PDF and the EPUB are not published at all, so they are not
+      # built here either - which also keeps this job to about a minute. Withholding
+      # them is a matter of the files being absent, not of the download links being
+      # hidden: a link is a convenience, and the URL would otherwise be guessable.
       - name: Render the HTML edition
         run: quarto render --to html
 

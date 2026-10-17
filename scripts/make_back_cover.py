@@ -9,7 +9,7 @@ Geometry follows Amazon KDP's paperback specification. The spine is a function o
 page count - 0.002252 in per page for black ink on white paper - so the extent is a
 command-line argument and the wrap must be rebuilt whenever it changes.
 
-    python scripts/make_back_cover.py --pages 592
+    python scripts/make_back_cover.py --pages 592 --photo images/author-photo.jpg
 
 Writes dist/cover/back-cover-6x9.png (the back panel alone, for review) and
 dist/cover/full-wrap-<N>pp.png (back + spine + front, with bleed, for upload).
@@ -103,7 +103,30 @@ CREDENTIALS = ("16 chapters  \u00b7  137 exercises with worked solutions  \u00b7
                "49 computed figures  \u00b7  256-term glossary")
 
 
-def back_panel(bleed: bool) -> Image.Image:
+def place_photo(img, path, x, y, w, h, top_anchor=0.3):
+    """Crop a photograph to fill the box exactly, without distorting it.
+
+    The box is portrait 1.05 x 1.24 in; a headshot is usually narrower than that, so
+    filling it means losing height rather than width. The surplus is taken mostly from
+    the bottom - `top_anchor` is the fraction removed from the top - because a portrait
+    wants a little headroom and cutting into the forehead looks like an accident.
+    """
+    photo = Image.open(path).convert("RGB")
+    target = w / h
+    pw, ph = photo.size
+    if pw / ph > target:                      # too wide: crop width, centred
+        new_w = round(ph * target)
+        left = (pw - new_w) // 2
+        photo = photo.crop((left, 0, left + new_w, ph))
+    else:                                     # too tall: crop height
+        new_h = round(pw / target)
+        top = round((ph - new_h) * top_anchor)
+        photo = photo.crop((0, top, pw, top + new_h))
+    img.paste(photo.resize((w, h), Image.LANCZOS), (x, y))
+    return photo.size
+
+
+def back_panel(bleed: bool, photo: str | None = None) -> Image.Image:
     """The back cover. With bleed it is 6.125 x 9.25 in, for the wrap; without, 6 x 9.
 
     The page is laid out in one pass from the top, then the author block is placed in
@@ -160,12 +183,19 @@ def back_panel(bleed: bool) -> Image.Image:
             f"reduce the body size."
         )
 
-    # Author: photograph placeholder beside the 77-word biography.
-    d.rectangle([left, author_top, left + px(1.05), author_top + author_h],
-                outline=GOLD, width=4)
-    for i, line in enumerate(["AUTHOR", "PHOTOGRAPH", "300 dpi", "1200 px min"]):
-        d.text((left + px(0.10), author_top + px(0.40) + i * px(0.15)),
-               line, font=font(7.5), fill=GOLD)
+    # Author: photograph beside the 77-word biography.
+    pw, ph = px(1.05), author_h
+    if photo:
+        place_photo(img, photo, left, author_top, pw, ph)
+        # A hairline keyline in the cover's gold, so the portrait reads as placed
+        # rather than dropped in. Drawn over the image, inside its edge.
+        d.rectangle([left, author_top, left + pw - 1, author_top + ph - 1],
+                    outline=GOLD, width=3)
+    else:
+        d.rectangle([left, author_top, left + pw, author_top + ph], outline=GOLD, width=4)
+        for i, line in enumerate(["AUTHOR", "PHOTOGRAPH", "300 dpi", "1200 px min"]):
+            d.text((left + px(0.10), author_top + px(0.40) + i * px(0.15)),
+                   line, font=font(7.5), fill=GOLD)
     draw_block(d, BIO, font(8.5), left + px(1.22), author_top, col - px(1.22), px(0.148))
 
     # Credentials line above the reserved strip.
@@ -208,14 +238,16 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--pages", type=int, required=True, help="extent of the printed book")
     ap.add_argument("--front", default="images/cover.jpg")
+    ap.add_argument("--photo", default=None,
+                    help="author photograph; omit to leave the marked placeholder")
     ap.add_argument("--outdir", default="dist/cover")
     a = ap.parse_args()
     os.makedirs(a.outdir, exist_ok=True)
 
-    back_panel(bleed=False).save(f"{a.outdir}/back-cover-6x9.png")
+    back_panel(bleed=False, photo=a.photo).save(f"{a.outdir}/back-cover-6x9.png")
 
     sp = spine(a.pages)
-    bk = back_panel(bleed=True)
+    bk = back_panel(bleed=True, photo=a.photo)
     H = px(TRIM_H + 2 * BLEED)
     front_w = px(TRIM_W + BLEED)
     wrap_img = Image.new("RGB", (bk.width + sp.width + front_w, H), GREY)

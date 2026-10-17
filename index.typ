@@ -442,7 +442,7 @@
 #show: book.with(
   title: [Practical Approach to Learning Bioinformatics],
   author: "Umar Ahmad",
-  date: "16 October 2026",
+  date: "17 October 2026",
   width: 6in,
   height: 9in,
   margin: (inside: 0.875in, outside: 0.625in, top: 0.75in, bottom: 0.875in),
@@ -580,26 +580,29 @@ The text and figures are released under the #link("https://creativecommons.org/l
 If the book is useful to you in teaching, the chapters are designed to map onto single sessions, and the exercises and worked solutions can be used directly.
 
 #part[Front matter]
-#heading(level: 1, numbering: none)[Foreword]
-<foreword>
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-
+#heading(level: 1, numbering: none)[Dedication]
+<dedication>
+#v(1.2em)
+#align(center)[
+  #emph[This work is specially dedicated to:]
+  #v(1.5em)
+  #emph[In loving memory of]
+  #v(0.5em)
+  #strong[Malama Nafisa Alkali Abbas], my mother \
+  #strong[Malam Ahmad Muhammadu Lamido], my father \
+  #strong[Alhaji Kabiru Ahmad], Walin Gabas of Misau, my elder brother
+  #v(1.5em)
+  #strong[Hajiya Nafisa Ahmad Isa], my wife \
+  and our son, #strong[Ahmad Umar Ahmad]
+  #v(1.5em)
+  #emph[and in appreciation of]
+  #v(0.5em)
+  #strong[Professor Muhammad Ali Pate, CON, mni, FAS, FAMedS] \
+  Honourable Coordinating Minister of Health and Social Welfare, Nigeria
+  #v(0.9em)
+  #strong[His Royal Highness Alhaji Ahmed Sulaiman, mni] \
+  Emir of Misau
+]
 #heading(level: 1, numbering: none)[Preface]
 <preface>
 A student came to me some years ago with a hard disk of RNA-seq data and a deadline. She had been taught molecular biology thoroughly and had generated the samples herself. What she had not been taught was what to do with sixty gigabytes of compressed text. She had spent a fortnight trying to open a FASTQ file in a spreadsheet.

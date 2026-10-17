@@ -1,5 +1,16 @@
 /* Small refinements that apply to both themes */
-.quarto-title-banner { background: linear-gradient(135deg, #1a5276 0%, #117864 100%); }
+
+/* The home page is the book's cover page, not an article: the author, affiliation
+   and publication date belong on the title page of the book and in the metadata,
+   not stacked under the title in a browser. The information stays in the HTML head
+   for search engines and citation tools; only its display is suppressed. */
+#title-block-header .quarto-title-meta-author,
+#title-block-header .quarto-title-meta { display: none; }
+
+/* Dedication page: centred, as it is set in the print edition. */
+.dedication { text-align: center; }
+.dedication p { margin: .35rem 0; }
+.quarto-title-banner { background: linear-gradient(135deg, #9a6d2e 0%, #6f4c1d 100%); }
 details > summary { cursor: pointer; font-weight: 600; }
 .sidebar-item-text { font-size: .95rem; }
 /* Keep long command lines readable rather than clipped */

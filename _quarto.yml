@@ -20,6 +20,11 @@ book:
   edition: "First edition"
   language: en-GB
   reader-mode: true
+  # No storefront link while the book is under consideration by a publisher: the
+  # free HTML edition is the only edition in circulation. To restore the "read free
+  # online, buy the PDF" arrangement later, put back the `tools:` block with the real
+  # Leanpub (or Gumroad) address - PUBLISHING.md explains the choice between them. It
+  # renders as a cart icon at the top of the sidebar in the HTML edition only.
   search:
     location: sidebar
     type: textbox
@@ -33,7 +38,13 @@ book:
   repo-url: https://github.com/babasaraki/practical-bioinformatics
   repo-branch: main
   repo-actions: [edit, issue, source]
-  downloads: [pdf, epub]
+  # No `downloads:` key, so the site offers neither the PDF nor the EPUB. This is the
+  # arrangement every Chapman & Hall/CRC book that is free online uses: the HTML
+  # edition is complete and free, and the downloadable formats are what the publisher
+  # sells. The print PDF substitutes directly for the printed book, and the EPUB IS
+  # the ebook edition. Add `downloads: [pdf, epub]` to offer them again - and note
+  # that the file must also be present in the published directory, which the GitHub
+  # workflow currently does not produce.
   sharing: [twitter, linkedin]
   page-footer:
     left: |
@@ -48,7 +59,16 @@ book:
 
     - part: "Front matter"
       chapters:
-        - front-matter/foreword.qmd
+        # Dedication first, then the foreword: the order a printed book uses, with the
+        # dedication on its own page immediately after the front matter opens and the
+        # foreword - the one section written by somebody else - ahead of the preface.
+        - front-matter/dedication.qmd
+        # The foreword is written by somebody else and is not yet in hand, so it is
+        # not part of the default build - an empty page reserved for it would be
+        # public on the website. `scripts/make_foreword_pdf.sh` puts the page back for
+        # one print render, to send to the prospective author of the foreword. When
+        # the text arrives, restore `front-matter/foreword.qmd` on the line below and
+        # delete that script.
         - front-matter/preface.qmd
         - front-matter/why-read-this-book.qmd
         - front-matter/structure-of-the-book.qmd

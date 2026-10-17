@@ -1,0 +1,6 @@
+/* Small refinements that apply to both themes */
+.quarto-title-banner { background: linear-gradient(135deg, #1a5276 0%, #117864 100%); }
+details > summary { cursor: pointer; font-weight: 600; }
+.sidebar-item-text { font-size: .95rem; }
+/* Keep long command lines readable rather than clipped */
+pre code { white-space: pre-wrap; word-break: break-word; }

@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.53">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Umar Ahmad">
+<meta name="description" content="A hands-on textbook that teaches bioinformatics by doing: sequence analysis, databases, Unix, Python, R and Bioconductor, genome annotation, NGS and RNA-seq, structural bioinformatics, networks, machine learning, clinical and pathogen genomics, and the ethics of working with human genomic data.">
+
+<title>References – Practical Approach to Learning Bioinformatics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./appendices/d-command-reference.html" rel="prev">
+<link href="./images/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="scss/extra.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendices/a-glossary.html">Appendices</a></li><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Practical Approach to Learning Bioinformatics</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://leanpub.com/practical-bioinformatics" title="Buy the PDF or EPUB" class="quarto-navigation-tool px-1" aria-label="Buy the PDF or EPUB"><i class="bi bi-cart"></i></a>
+    <a href="https://github.com/babasaraki/practical-bioinformatics" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./Practical-Approach-to-Learning-Bioinformatics.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./Practical-Approach-to-Learning-Bioinformatics.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Front matter</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./front-matter/dedication.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dedication</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./front-matter/foreword.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Foreword</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./front-matter/preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./front-matter/why-read-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Why read this book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./front-matter/structure-of-the-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Structure of the book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./front-matter/how-to-use-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to use this book</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./front-matter/about-the-author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the author</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./front-matter/acknowledgments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgements</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Foundations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part1/01-introduction-to-bioinformatics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What bioinformatics is, and how to set up to do it</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part1/02-basic-concepts-of-molecular-biology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Molecular biology for people who analyse data</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Biological data and databases</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part2/03-bioinformatics-databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Biological databases and how to get data out of them</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sequence analysis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part3/04-sequence-alignment-and-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sequence alignment and what it tells you</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">The bioinformatics toolchain</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part4/05-unix-linux-for-bioinformatics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The command line as a working environment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part4/06-introduction-to-python-for-bioinformatics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Python for bioinformatics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part4/07-introduction-to-r-for-bioinformatics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">R and Bioconductor</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Genomes, reads and structures</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part5/08-genome-annotation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">From assembled sequence to annotated genome</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part5/09-ngs-data-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Next-generation sequencing data from reads to results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part5/10-structural-bioinformatics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Protein structure and what you can compute from it</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Systems biology and data science</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part6/11-systems-biology-and-network-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Biological networks and pathway analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part6/12-data-science-in-bioinformatics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Statistics and machine learning on omics data</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Applications and responsible practice</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part7/13-bioinformatics-in-disease-and-healthcare.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Bioinformatics in disease and healthcare</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part7/14-ethical-legal-and-social-issues-in-bioinformatics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Working responsibly with genomic data</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Consolidation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part8/15-practical-bioinformatics-project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">A complete project, start to finish</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part8/16-chapter-summaries-and-review-questions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Consolidation and review</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/a-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/b-software-environment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">The software environment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/c-bundled-datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Bundled datasets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/d-command-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Command and function reference</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendices/a-glossary.html">Appendices</a></li><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">References</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Every work cited in this book is listed here. The bibliography is generated from <code>references.bib</code>, in which each entry was resolved against the Crossref or OpenAlex metadata registries and carries a registered DOI, except for the handful of works that have none — the JMLR articles, the R manual and the FastQC documentation — which are marked as such in the file.</p>
+<p>To rebuild the bibliography from scratch:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> scripts/build_bibliography.py    <span class="co"># resolve against Crossref</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> scripts/resolve_openalex.py      <span class="co"># fill gaps using OpenAlex (needs an API key)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> scripts/normalise_bibliography.py  <span class="co"># replace each entry with the publisher's own record</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-icgc2020" class="csl-entry" role="listitem">
+Aaltonen, Lauri A., Federico Abascal, Adam Abeshouse, Hiroyuki
+Aburatani, David J. Adams, Nishant Agrawal, Keun Soo Ahn, et al. 2020.
+<span>“Pan-Cancer Analysis of Whole Genomes.”</span> <em>Nature</em> 578
+(7793): 82–93. <a href="https://doi.org/10.1038/s41586-020-1969-6">https://doi.org/10.1038/s41586-020-1969-6</a>.
+</div>
+<div id="ref-abramson2024" class="csl-entry" role="listitem">
+Abramson, Josh, Jonas Adler, Jack Dunger, Richard Evans, Tim Green,
+Alexander Pritzel, Olaf Ronneberger, et al. 2024. <span>“Accurate
+Structure Prediction of Biomolecular Interactions with AlphaFold
+3.”</span> <em>Nature</em> 630 (8016): 493–500. <a href="https://doi.org/10.1038/s41586-024-07487-w">https://doi.org/10.1038/s41586-024-07487-w</a>.
+</div>
+<div id="ref-go2023" class="csl-entry" role="listitem">
+Aleksander, Suzi A, James Balhoff, Seth Carbon, J Michael Cherry, Harold
+J Drabkin, Dustin Ebert, Marc Feuermann, et al. 2023. <span>“The Gene
+Ontology Knowledgebase in 2023.”</span> Edited by A Baryshnikova.
+<em>GENETICS</em> 224 (1). <a href="https://doi.org/10.1093/genetics/iyad031">https://doi.org/10.1093/genetics/iyad031</a>.
+</div>
+<div id="ref-alexandrov2020" class="csl-entry" role="listitem">
+Alexandrov, Ludmil B., Jaegil Kim, Nicholas J. Haradhvala, Mi Ni Huang,
+Alvin Wei Tian Ng, Yang Wu, Arnoud Boot, et al. 2020. <span>“The
+Repertoire of Mutational Signatures in Human Cancer.”</span>
+<em>Nature</em> 578 (7793): 94–101. <a href="https://doi.org/10.1038/s41586-020-1943-3">https://doi.org/10.1038/s41586-020-1943-3</a>.
+</div>
+<div id="ref-altschul1997" class="csl-entry" role="listitem">
+Altschul, S. 1997. <span>“Gapped BLAST and PSI-BLAST: A New Generation
+of Protein Database Search Programs.”</span> <em>Nucleic Acids
+Research</em> 25 (17): 3389–3402. <a href="https://doi.org/10.1093/nar/25.17.3389">https://doi.org/10.1093/nar/25.17.3389</a>.
+</div>
+<div id="ref-altschul1990" class="csl-entry" role="listitem">
+Altschul, Stephen F., Warren Gish, Webb Miller, Eugene W. Myers, and
+David J. Lipman. 1990. <span>“Basic Local Alignment Search Tool.”</span>
+<em>Journal of Molecular Biology</em> 215 (3): 403–10. <a href="https://doi.org/10.1016/s0022-2836(05)80360-2">https://doi.org/10.1016/s0022-2836(05)80360-2</a>.
+</div>
+<div id="ref-amberger2019" class="csl-entry" role="listitem">
+Amberger, Joanna S, Carol A Bocchini, Alan F Scott, and Ada Hamosh.
+2018. <span>“OMIM.org: Leveraging Knowledge Across Phenotype–Gene
+Relationships.”</span> <em>Nucleic Acids Research</em> 47 (D1):
+D1038–43. <a href="https://doi.org/10.1093/nar/gky1151">https://doi.org/10.1093/nar/gky1151</a>.
+</div>
+<div id="ref-ambroise2002" class="csl-entry" role="listitem">
+Ambroise, Christophe, and Geoffrey J. McLachlan. 2002. <span>“Selection
+Bias in Gene Extraction on the Basis of Microarray Gene-Expression
+Data.”</span> <em>Proceedings of the National Academy of Sciences</em>
+99 (10): 6562–66. <a href="https://doi.org/10.1073/pnas.102102699">https://doi.org/10.1073/pnas.102102699</a>.
+</div>
+<div id="ref-anders2015htseq" class="csl-entry" role="listitem">
+Anders, Simon, Paul Theodor Pyl, and Wolfgang Huber. 2014. <span>“HTSeq
+– a Python Framework to Work with High-Throughput Sequencing
+Data,”</span> February. <a href="https://doi.org/10.1101/002824">https://doi.org/10.1101/002824</a>.
+</div>
+<div id="ref-fastqc" class="csl-entry" role="listitem">
+Andrews, Simon. 2010. <span>“<span class="nocase">FastQC: A Quality
+Control Tool for High Throughput Sequence Data</span>.”</span> <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" class="uri">https://www.bioinformatics.babraham.ac.uk/projects/fastqc/</a>.
+</div>
+<div id="ref-arita2021" class="csl-entry" role="listitem">
+Arita, Masanori, Ilene Karsch-Mizrachi, and Guy Cochrane. 2020.
+<span>“The International Nucleotide Sequence Database
+Collaboration.”</span> <em>Nucleic Acids Research</em> 49 (D1): D121–24.
+<a href="https://doi.org/10.1093/nar/gkaa967">https://doi.org/10.1093/nar/gkaa967</a>.
+</div>
+<div id="ref-ashburner2000" class="csl-entry" role="listitem">
+Ashburner, Michael, Catherine A. Ball, Judith A. Blake, David Botstein,
+Heather Butler, J. Michael Cherry, Allan P. Davis, et al. 2000.
+<span>“Gene Ontology: Tool for the Unification of Biology.”</span>
+<em>Nature Genetics</em> 25 (1): 25–29. <a href="https://doi.org/10.1038/75556">https://doi.org/10.1038/75556</a>.
+</div>
+<div id="ref-1000g2015" class="csl-entry" role="listitem">
+Auton, Adam, Gonçalo R. Abecasis, David M. Altshuler, Richard M. Durbin,
+Gonçalo R. Abecasis, David R. Bentley, Aravinda Chakravarti, et al.
+2015. <span>“A Global Reference for Human Genetic Variation.”</span>
+<em>Nature</em> 526 (7571): 68–74. <a href="https://doi.org/10.1038/nature15393">https://doi.org/10.1038/nature15393</a>.
+</div>
+<div id="ref-avsec2021" class="csl-entry" role="listitem">
+Avsec, Žiga, Vikram Agarwal, Daniel Visentin, Joseph R. Ledsam,
+Agnieszka Grabska-Barwinska, Kyle R. Taylor, Yannis Assael, John Jumper,
+Pushmeet Kohli, and David R. Kelley. 2021. <span>“Effective Gene
+Expression Prediction from Sequence by Integrating Long-Range
+Interactions,”</span> April. <a href="https://doi.org/10.1101/2021.04.07.438649">https://doi.org/10.1101/2021.04.07.438649</a>.
+</div>
+<div id="ref-baek2021" class="csl-entry" role="listitem">
+Baek, Minkyung, Frank DiMaio, Ivan Anishchenko, Justas Dauparas, Sergey
+Ovchinnikov, Gyu Rie Lee, Jue Wang, et al. 2021. <span>“Accurate
+Prediction of Protein Structures and Interactions Using a Three-Track
+Neural Network.”</span> <em>Science</em> 373 (6557): 871–76. <a href="https://doi.org/10.1126/science.abj8754">https://doi.org/10.1126/science.abj8754</a>.
+</div>
+<div id="ref-bankevich2012" class="csl-entry" role="listitem">
+Bankevich, Anton, Sergey Nurk, Dmitry Antipov, Alexey A. Gurevich,
+Mikhail Dvorkin, Alexander S. Kulikov, Valery M. Lesin, et al. 2012.
+<span>“SPAdes: A New Genome Assembly Algorithm and Its Applications to
+Single-Cell Sequencing.”</span> <em>Journal of Computational
+Biology</em> 19 (5): 455–77. <a href="https://doi.org/10.1089/cmb.2012.0021">https://doi.org/10.1089/cmb.2012.0021</a>.
+</div>
+<div id="ref-barrett2013" class="csl-entry" role="listitem">
+Barrett, Tanya, Stephen E. Wilhite, Pierre Ledoux, Carlos Evangelista,
+Irene F. Kim, Maxim Tomashevsky, Kimberly A. Marshall, et al. 2012.
+<span>“NCBI GEO: Archive for Functional Genomics Data
+Sets—Update.”</span> <em>Nucleic Acids Research</em> 41 (D1): D991–95.
+<a href="https://doi.org/10.1093/nar/gks1193">https://doi.org/10.1093/nar/gks1193</a>.
+</div>
+<div id="ref-uniprot2023" class="csl-entry" role="listitem">
+Bateman, Alex, Maria-Jesus Martin, Sandra Orchard, Michele Magrane,
+Shadab Ahmad, Emanuele Alpi, Emily H Bowler-Barnett, et al. 2022.
+<span>“UniProt: The Universal Protein Knowledgebase in 2023.”</span>
+<em>Nucleic Acids Research</em> 51 (D1): D523–31. <a href="https://doi.org/10.1093/nar/gkac1052">https://doi.org/10.1093/nar/gkac1052</a>.
+</div>
+<div id="ref-becht2019" class="csl-entry" role="listitem">
+Becht, Etienne, Leland McInnes, John Healy, Charles-Antoine Dutertre,
+Immanuel W H Kwok, Lai Guan Ng, Florent Ginhoux, and Evan W Newell.
+2018. <span>“Dimensionality Reduction for Visualizing Single-Cell Data
+Using UMAP.”</span> <em>Nature Biotechnology</em> 37 (1): 38–44. <a href="https://doi.org/10.1038/nbt.4314">https://doi.org/10.1038/nbt.4314</a>.
+</div>
+<div id="ref-benjamini1995" class="csl-entry" role="listitem">
+Benjamini, Yoav, and Yosef Hochberg. 1995. <span>“Controlling the False
+Discovery Rate: A Practical and Powerful Approach to Multiple
+Testing.”</span> <em>Journal of the Royal Statistical Society Series B:
+Statistical Methodology</em> 57 (1): 289–300. <a href="https://doi.org/10.1111/j.2517-6161.1995.tb02031.x">https://doi.org/10.1111/j.2517-6161.1995.tb02031.x</a>.
+</div>
+<div id="ref-berman2000" class="csl-entry" role="listitem">
+Berman, H. M. 2000. <span>“The Protein Data Bank.”</span> <em>Nucleic
+Acids Research</em> 28 (1): 235–42. <a href="https://doi.org/10.1093/nar/28.1.235">https://doi.org/10.1093/nar/28.1.235</a>.
+</div>
+<div id="ref-blondel2008" class="csl-entry" role="listitem">
+Blondel, Vincent D, Jean-Loup Guillaume, Renaud Lambiotte, and Etienne
+Lefebvre. 2008. <span>“Fast Unfolding of Communities in Large
+Networks.”</span> <em>Journal of Statistical Mechanics: Theory and
+Experiment</em> 2008 (10): P10008. <a href="https://doi.org/10.1088/1742-5468/2008/10/p10008">https://doi.org/10.1088/1742-5468/2008/10/p10008</a>.
+</div>
+<div id="ref-bolger2014" class="csl-entry" role="listitem">
+Bolger, Anthony M., Marc Lohse, and Bjoern Usadel. 2014.
+<span>“Trimmomatic: A Flexible Trimmer for Illumina Sequence
+Data.”</span> <em>Bioinformatics</em> 30 (15): 2114–20. <a href="https://doi.org/10.1093/bioinformatics/btu170">https://doi.org/10.1093/bioinformatics/btu170</a>.
+</div>
+<div id="ref-broido2019" class="csl-entry" role="listitem">
+Broido, Anna D., and Aaron Clauset. 2019. <span>“Scale-Free Networks Are
+Rare.”</span> <em>Nature Communications</em> 10 (1). <a href="https://doi.org/10.1038/s41467-019-08746-5">https://doi.org/10.1038/s41467-019-08746-5</a>.
+</div>
+<div id="ref-brooks2011" class="csl-entry" role="listitem">
+Brooks, Angela N., Li Yang, Michael O. Duff, Kasper D. Hansen, Jung W.
+Park, Sandrine Dudoit, Steven E. Brenner, and Brenton R. Graveley. 2010.
+<span>“Conservation of an RNA Regulatory Map Between
+&lt;i&gt;drosophila&lt;/i&gt; and Mammals.”</span> <em>Genome
+Research</em> 21 (2): 193–202. <a href="https://doi.org/10.1101/gr.108662.110">https://doi.org/10.1101/gr.108662.110</a>.
+</div>
+<div id="ref-burley2023" class="csl-entry" role="listitem">
+Burley, Stephen K, Charmi Bhikadiya, Chunxiao Bi, Sebastian Bittrich,
+Henry Chao, Li Chen, Paul A Craig, et al. 2022. <span>“RCSB Protein Data
+Bank (RCSB.org): Delivery of Experimentally-Determined PDB Structures
+Alongside One Million Computed Structure Models of Proteins from
+Artificial Intelligence/Machine Learning.”</span> <em>Nucleic Acids
+Research</em> 51 (D1): D488–508. <a href="https://doi.org/10.1093/nar/gkac1077">https://doi.org/10.1093/nar/gkac1077</a>.
+</div>
+<div id="ref-cantelli2022" class="csl-entry" role="listitem">
+Cantelli, Gaia, Guy Cochrane, Cath Brooksbank, Ellen McDonagh, Paul
+Flicek, Johanna McEntyre, Ewan Birney, and Rolf Apweiler. 2020.
+<span>“The European Bioinformatics Institute: Empowering Cooperation in
+Response to a Global Health Crisis.”</span> <em>Nucleic Acids
+Research</em> 49 (D1): D29–37. <a href="https://doi.org/10.1093/nar/gkaa1077">https://doi.org/10.1093/nar/gkaa1077</a>.
+</div>
+<div id="ref-carroll2020" class="csl-entry" role="listitem">
+Carroll, Stephanie Russo, Ibrahim Garba, Oscar L. Figueroa-Rodríguez,
+Jarita Holbrook, Raymond Lovett, Simeon Materechera, Mark Parsons, et
+al. 2020. <span>“The CARE Principles for Indigenous Data
+Governance.”</span> <em>Data Science Journal</em> 19. <a href="https://doi.org/10.5334/dsj-2020-043">https://doi.org/10.5334/dsj-2020-043</a>.
+</div>
+<div id="ref-cerami2012" class="csl-entry" role="listitem">
+Cerami, Ethan, Jianjiong Gao, Ugur Dogrusoz, Benjamin E. Gross, Selcuk
+Onur Sumer, Bülent Arman Aksoy, Anders Jacobsen, et al. 2012. <span>“The
+cBio Cancer Genomics Portal: An Open Platform for Exploring
+Multidimensional Cancer Genomics Data.”</span> <em>Cancer Discovery</em>
+2 (5): 401–4. <a href="https://doi.org/10.1158/2159-8290.cd-12-0095">https://doi.org/10.1158/2159-8290.cd-12-0095</a>.
+</div>
+<div id="ref-chen2018" class="csl-entry" role="listitem">
+Chen, Shifu, Yanqing Zhou, Yaru Chen, and Jia Gu. 2018.
+<span>“&lt;I&gt;fastp&lt;/i&gt; : An Ultra-Fast All-in-One FASTQ
+Preprocessor,”</span> March. <a href="https://doi.org/10.1101/274100">https://doi.org/10.1101/274100</a>.
+</div>
+<div id="ref-cho1994" class="csl-entry" role="listitem">
+Cho, Yunje, Svetlana Gorina, Philip D. Jeffrey, and Nikola P. Pavletich.
+1994. <span>“Crystal Structure of a P53 Tumor Suppressor-DNA Complex:
+Understanding Tumorigenic Mutations.”</span> <em>Science</em> 265
+(5170): 346–55. <a href="https://doi.org/10.1126/science.8023157">https://doi.org/10.1126/science.8023157</a>.
+</div>
+<div id="ref-cock2009" class="csl-entry" role="listitem">
+Cock, Peter J. A., Tiago Antao, Jeffrey T. Chang, Brad A. Chapman, Cymon
+J. Cox, Andrew Dalke, Iddo Friedberg, et al. 2009. <span>“Biopython:
+Freely Available Python Tools for Computational Molecular Biology and
+Bioinformatics.”</span> <em>Bioinformatics</em> 25 (11): 1422–23. <a href="https://doi.org/10.1093/bioinformatics/btp163">https://doi.org/10.1093/bioinformatics/btp163</a>.
+</div>
+<div id="ref-csardi2006" class="csl-entry" role="listitem">
+Csardi, Gabor, and Tamas Nepusz. 2006. <span>“<span class="nocase">The
+igraph software package for complex network research</span>.”</span>
+<em>InterJournal, Complex Systems</em>, 1695.
+</div>
+<div id="ref-cunningham2022" class="csl-entry" role="listitem">
+Cunningham, Fiona, James E Allen, Jamie Allen, Jorge Alvarez-Jarreta, M
+Ridwan Amode, Irina M Armean, Olanrewaju Austine-Orimoloye, et al. 2021.
+<span>“Ensembl 2022.”</span> <em>Nucleic Acids Research</em> 50 (D1):
+D988–95. <a href="https://doi.org/10.1093/nar/gkab1049">https://doi.org/10.1093/nar/gkab1049</a>.
+</div>
+<div id="ref-danecek2011" class="csl-entry" role="listitem">
+Danecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric
+Banks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. <span>“The
+Variant Call Format and VCFtools.”</span> <em>Bioinformatics</em> 27
+(15): 2156–58. <a href="https://doi.org/10.1093/bioinformatics/btr330">https://doi.org/10.1093/bioinformatics/btr330</a>.
+</div>
+<div id="ref-danecek2021" class="csl-entry" role="listitem">
+Danecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu
+Ohan, Martin O Pollard, Andrew Whitwham, et al. 2021. <span>“Twelve
+Years of SAMtools and BCFtools.”</span> <em>GigaScience</em> 10 (2). <a href="https://doi.org/10.1093/gigascience/giab008">https://doi.org/10.1093/gigascience/giab008</a>.
+</div>
+<div id="ref-dayhoff1978" class="csl-entry" role="listitem">
+Dayhoff, Margaret O., Robert M. Schwartz, and Bruce C. Orcutt. 1978.
+<span>“<span class="nocase">A model of evolutionary change in
+proteins</span>.”</span> In <em>Atlas of Protein Sequence and
+Structure</em>, 5:345–52. Suppl. 3. Washington, DC: National Biomedical
+Research Foundation.
+</div>
+<div id="ref-depristo2011" class="csl-entry" role="listitem">
+DePristo, Mark A, Eric Banks, Ryan Poplin, Kiran V Garimella, Jared R
+Maguire, Christopher Hartl, Anthony A Philippakis, et al. 2011. <span>“A
+Framework for Variation Discovery and Genotyping Using Next-Generation
+DNA Sequencing Data.”</span> <em>Nature Genetics</em> 43 (5): 491–98. <a href="https://doi.org/10.1038/ng.806">https://doi.org/10.1038/ng.806</a>.
+</div>
+<div id="ref-ditommaso2017" class="csl-entry" role="listitem">
+Di Tommaso, Paolo, Maria Chatzou, Evan W Floden, Pablo Prieto Barja,
+Emilio Palumbo, and Cedric Notredame. 2017. <span>“Nextflow Enables
+Reproducible Computational Workflows.”</span> <em>Nature
+Biotechnology</em> 35 (4): 316–19. <a href="https://doi.org/10.1038/nbt.3820">https://doi.org/10.1038/nbt.3820</a>.
+</div>
+<div id="ref-dobin2013" class="csl-entry" role="listitem">
+Dobin, Alexander, Carrie A. Davis, Felix Schlesinger, Jorg Drenkow,
+Chris Zaleski, Sonali Jha, Philippe Batut, Mark Chaisson, and Thomas R.
+Gingeras. 2012. <span>“STAR: Ultrafast Universal RNA-Seq
+Aligner.”</span> <em>Bioinformatics</em> 29 (1): 15–21. <a href="https://doi.org/10.1093/bioinformatics/bts635">https://doi.org/10.1093/bioinformatics/bts635</a>.
+</div>
+<div id="ref-eddy2011" class="csl-entry" role="listitem">
+Eddy, Sean R. 2011. <span>“Accelerated Profile HMM Searches.”</span>
+Edited by William R. Pearson. <em>PLoS Computational Biology</em> 7
+(10): e1002195. <a href="https://doi.org/10.1371/journal.pcbi.1002195">https://doi.org/10.1371/journal.pcbi.1002195</a>.
+</div>
+<div id="ref-edgar2004" class="csl-entry" role="listitem">
+Edgar, R. C. 2004. <span>“MUSCLE: Multiple Sequence Alignment with High
+Accuracy and High Throughput.”</span> <em>Nucleic Acids Research</em> 32
+(5): 1792–97. <a href="https://doi.org/10.1093/nar/gkh340">https://doi.org/10.1093/nar/gkh340</a>.
+</div>
+<div id="ref-eraslan2019" class="csl-entry" role="listitem">
+Eraslan, Gökcen, Žiga Avsec, Julien Gagneur, and Fabian J. Theis. 2019.
+<span>“Deep Learning: New Computational Modelling Techniques for
+Genomics.”</span> <em>Nature Reviews Genetics</em> 20 (7): 389–403. <a href="https://doi.org/10.1038/s41576-019-0122-6">https://doi.org/10.1038/s41576-019-0122-6</a>.
+</div>
+<div id="ref-erlich2014" class="csl-entry" role="listitem">
+Erlich, Yaniv, and Arvind Narayanan. 2013. <span>“Routes for Breaching
+and Protecting Genetic Privacy,”</span> November. <a href="https://doi.org/10.1101/000042">https://doi.org/10.1101/000042</a>.
+</div>
+<div id="ref-erlich2018" class="csl-entry" role="listitem">
+Erlich, Yaniv, Tal Shor, Itsik Pe’er, and Shai Carmi. 2018.
+<span>“Identity Inference of Genomic Data Using Long-Range Familial
+Searches.”</span> <em>Science</em> 362 (6415): 690–94. <a href="https://doi.org/10.1126/science.aau4832">https://doi.org/10.1126/science.aau4832</a>.
+</div>
+<div id="ref-ewels2016" class="csl-entry" role="listitem">
+Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016.
+<span>“MultiQC: Summarize Analysis Results for Multiple Tools and
+Samples in a Single Report.”</span> <em>Bioinformatics</em> 32 (19):
+3047–48. <a href="https://doi.org/10.1093/bioinformatics/btw354">https://doi.org/10.1093/bioinformatics/btw354</a>.
+</div>
+<div id="ref-felsenstein1985" class="csl-entry" role="listitem">
+Felsenstein, Joseph. 1985. <span>“Confidence Limits on Phylogenies: An
+Approach Using the Bootstrap.”</span> <em>Evolution</em> 39 (4): 783. <a href="https://doi.org/10.2307/2408678">https://doi.org/10.2307/2408678</a>.
+</div>
+<div id="ref-fiume2019" class="csl-entry" role="listitem">
+Fiume, Marc, Miroslav Cupak, Stephen Keenan, Jordi Rambla, Sabela de la
+Torre, Stephanie O. M. Dyke, Anthony J. Brookes, et al. 2019.
+<span>“Federated Discovery and Sharing of Genomic Data Using
+Beacons.”</span> <em>Nature Biotechnology</em> 37 (3): 220–24. <a href="https://doi.org/10.1038/s41587-019-0046-x">https://doi.org/10.1038/s41587-019-0046-x</a>.
+</div>
+<div id="ref-fortuno2021" class="csl-entry" role="listitem">
+Fortuno, Cristina, Kristy Lee, Magali Olivier, Tina Pesaran, Phuong L.
+Mai, Kelvin C. Andrade, Laura D. Attardi, et al. 2020.
+<span>“Specifications of the ACMG/AMP Variant Interpretation Guidelines
+for Germline &lt;i&gt;TP53&lt;/i&gt; Variants.”</span> <em>Human
+Mutation</em> 42 (3): 223–36. <a href="https://doi.org/10.1002/humu.24152">https://doi.org/10.1002/humu.24152</a>.
+</div>
+<div id="ref-fraser1995" class="csl-entry" role="listitem">
+Fraser, Claire M., Jeannine D. Gocayne, Owen White, Mark D. Adams,
+Rebecca A. Clayton, Robert D. Fleischmann, Carol J. Bult, et al. 1995.
+<span>“The Minimal Gene Complement of &lt;i&gt;mycoplasma
+Genitalium&lt;/i&gt;.”</span> <em>Science</em> 270 (5235): 397–404. <a href="https://doi.org/10.1126/science.270.5235.397">https://doi.org/10.1126/science.270.5235.397</a>.
+</div>
+<div id="ref-gentleman2004" class="csl-entry" role="listitem">
+Gentleman, Robert C, Vincent J Carey, Douglas M Bates, Ben Bolstad,
+Marcel Dettling, Sandrine Dudoit, Byron Ellis, et al. 2004.
+<span>“Bioconductor: Open Software Development for Computational Biology
+and Bioinformatics.”</span> <em>Genome Biology</em> 5 (10). <a href="https://doi.org/10.1186/gb-2004-5-10-r80">https://doi.org/10.1186/gb-2004-5-10-r80</a>.
+</div>
+<div id="ref-giacomelli2018" class="csl-entry" role="listitem">
+Giacomelli, Andrew O., Xiaoping Yang, Robert E. Lintner, James M.
+McFarland, Marc Duby, Jaegil Kim, Thomas P. Howard, et al. 2018.
+<span>“Mutational Processes Shape the Landscape of TP53 Mutations in
+Human Cancer.”</span> <em>Nature Genetics</em> 50 (10): 1381–87. <a href="https://doi.org/10.1038/s41588-018-0204-y">https://doi.org/10.1038/s41588-018-0204-y</a>.
+</div>
+<div id="ref-girvan2002" class="csl-entry" role="listitem">
+Girvan, M., and M. E. J. Newman. 2002. <span>“Community Structure in
+Social and Biological Networks.”</span> <em>Proceedings of the National
+Academy of Sciences</em> 99 (12): 7821–26. <a href="https://doi.org/10.1073/pnas.122653799">https://doi.org/10.1073/pnas.122653799</a>.
+</div>
+<div id="ref-gotoh1982" class="csl-entry" role="listitem">
+Gotoh, Osamu. 1982. <span>“An Improved Algorithm for Matching Biological
+Sequences.”</span> <em>Journal of Molecular Biology</em> 162 (3): 705–8.
+<a href="https://doi.org/10.1016/0022-2836(82)90398-9">https://doi.org/10.1016/0022-2836(82)90398-9</a>.
+</div>
+<div id="ref-gruning2018" class="csl-entry" role="listitem">
+Grüning, Björn, Ryan Dale, Andreas Sjödin, Brad A. Chapman, Jillian
+Rowe, Christopher H. Tomkins-Tinch, Renan Valieris, and Johannes Köster.
+2018. <span>“Bioconda: Sustainable and Comprehensive Software
+Distribution for the Life Sciences.”</span> <em>Nature Methods</em> 15
+(7): 475–76. <a href="https://doi.org/10.1038/s41592-018-0046-7">https://doi.org/10.1038/s41592-018-0046-7</a>.
+</div>
+<div id="ref-gurevich2013" class="csl-entry" role="listitem">
+Gurevich, Alexey, Vladislav Saveliev, Nikolay Vyahhi, and Glenn Tesler.
+2013. <span>“QUAST: Quality Assessment Tool for Genome
+Assemblies.”</span> <em>Bioinformatics</em> 29 (8): 1072–75. <a href="https://doi.org/10.1093/bioinformatics/btt086">https://doi.org/10.1093/bioinformatics/btt086</a>.
+</div>
+<div id="ref-gymrek2013" class="csl-entry" role="listitem">
+Gymrek, Melissa, Amy L. McGuire, David Golan, Eran Halperin, and Yaniv
+Erlich. 2013. <span>“Identifying Personal Genomes by Surname
+Inference.”</span> <em>Science</em> 339 (6117): 321–24. <a href="https://doi.org/10.1126/science.1229566">https://doi.org/10.1126/science.1229566</a>.
+</div>
+<div id="ref-hadfield2018" class="csl-entry" role="listitem">
+Hadfield, James, Colin Megill, Sidney M. Bell, John Huddleston, Barney
+Potter, Charlton Callender, Pavel Sagulenko, Trevor Bedford, and Richard
+A. Neher. 2017. <span>“Nextstrain: Real-Time Tracking of Pathogen
+Evolution,”</span> November. <a href="https://doi.org/10.1101/224048">https://doi.org/10.1101/224048</a>.
+</div>
+<div id="ref-harris2020" class="csl-entry" role="listitem">
+Harris, Charles R., K. Jarrod Millman, Stéfan J. van der Walt, Ralf
+Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, et al. 2020.
+<span>“Array Programming with NumPy.”</span> <em>Nature</em> 585 (7825):
+357–62. <a href="https://doi.org/10.1038/s41586-020-2649-2">https://doi.org/10.1038/s41586-020-2649-2</a>.
+</div>
+<div id="ref-henikoff1992" class="csl-entry" role="listitem">
+Henikoff, S, and J G Henikoff. 1992. <span>“Amino Acid Substitution
+Matrices from Protein Blocks.”</span> <em>Proceedings of the National
+Academy of Sciences</em> 89 (22): 10915–19. <a href="https://doi.org/10.1073/pnas.89.22.10915">https://doi.org/10.1073/pnas.89.22.10915</a>.
+</div>
+<div id="ref-homer2008" class="csl-entry" role="listitem">
+Homer, Nils, Szabolcs Szelinger, Margot Redman, David Duggan, Waibhav
+Tembe, Jill Muehling, John V. Pearson, Dietrich A. Stephan, Stanley F.
+Nelson, and David W. Craig. 2008. <span>“Resolving Individuals
+Contributing Trace Amounts of DNA to Highly Complex Mixtures Using
+High-Density SNP Genotyping Microarrays.”</span> Edited by Peter M.
+Visscher. <em>PLoS Genetics</em> 4 (8): e1000167. <a href="https://doi.org/10.1371/journal.pgen.1000167">https://doi.org/10.1371/journal.pgen.1000167</a>.
+</div>
+<div id="ref-hu2021" class="csl-entry" role="listitem">
+Hu, Ben, Hua Guo, Peng Zhou, and Zheng-Li Shi. 2020.
+<span>“Characteristics of SARS-CoV-2 and COVID-19.”</span> <em>Nature
+Reviews Microbiology</em> 19 (3): 141–54. <a href="https://doi.org/10.1038/s41579-020-00459-7">https://doi.org/10.1038/s41579-020-00459-7</a>.
+</div>
+<div id="ref-huber2015" class="csl-entry" role="listitem">
+Huber, Wolfgang, Vincent J Carey, Robert Gentleman, Simon Anders, Marc
+Carlson, Benilton S Carvalho, Hector Corrada Bravo, et al. 2015.
+<span>“Orchestrating High-Throughput Genomic Analysis with
+Bioconductor.”</span> <em>Nature Methods</em> 12 (2): 115–21. <a href="https://doi.org/10.1038/nmeth.3252">https://doi.org/10.1038/nmeth.3252</a>.
+</div>
+<div id="ref-hunter2007" class="csl-entry" role="listitem">
+Hunter, John D. 2007. <span>“Matplotlib: A 2D Graphics
+Environment.”</span> <em>Computing in Science &amp;Amp; Engineering</em>
+9 (3): 90–95. <a href="https://doi.org/10.1109/mcse.2007.55">https://doi.org/10.1109/mcse.2007.55</a>.
+</div>
+<div id="ref-hyatt2010" class="csl-entry" role="listitem">
+Hyatt, Doug, Gwo-Liang Chen, Philip F LoCascio, Miriam L Land, Frank W
+Larimer, and Loren J Hauser. 2010. <span>“Prodigal: Prokaryotic Gene
+Recognition and Translation Initiation Site Identification.”</span>
+<em>BMC Bioinformatics</em> 11 (1). <a href="https://doi.org/10.1186/1471-2105-11-119">https://doi.org/10.1186/1471-2105-11-119</a>.
+</div>
+<div id="ref-johnson2007" class="csl-entry" role="listitem">
+Johnson, W. Evan, Cheng Li, and Ariel Rabinovic. 2006. <span>“Adjusting
+Batch Effects in Microarray Expression Data Using Empirical Bayes
+Methods.”</span> <em>Biostatistics</em> 8 (1): 118–27. <a href="https://doi.org/10.1093/biostatistics/kxj037">https://doi.org/10.1093/biostatistics/kxj037</a>.
+</div>
+<div id="ref-jumper2021" class="csl-entry" role="listitem">
+Jumper, John, Richard Evans, Alexander Pritzel, Tim Green, Michael
+Figurnov, Olaf Ronneberger, Kathryn Tunyasuvunakool, et al. 2021.
+<span>“Highly Accurate Protein Structure Prediction with
+AlphaFold.”</span> <em>Nature</em> 596 (7873): 583–89. <a href="https://doi.org/10.1038/s41586-021-03819-2">https://doi.org/10.1038/s41586-021-03819-2</a>.
+</div>
+<div id="ref-kabsch1983" class="csl-entry" role="listitem">
+Kabsch, Wolfgang, and Christian Sander. 1983. <span>“Dictionary of
+Protein Secondary Structure: Pattern Recognition of Hydrogen‐bonded and
+Geometrical Features.”</span> <em>Biopolymers</em> 22 (12): 2577–637. <a href="https://doi.org/10.1002/bip.360221211">https://doi.org/10.1002/bip.360221211</a>.
+</div>
+<div id="ref-kanehisa2000" class="csl-entry" role="listitem">
+Kanehisa, M. 2000. <span>“KEGG: Kyoto Encyclopedia of Genes and
+Genomes.”</span> <em>Nucleic Acids Research</em> 28 (1): 27–30. <a href="https://doi.org/10.1093/nar/28.1.27">https://doi.org/10.1093/nar/28.1.27</a>.
+</div>
+<div id="ref-karczewski2020" class="csl-entry" role="listitem">
+Karczewski, Konrad J., Laurent C. Francioli, Grace Tiao, Beryl B.
+Cummings, Jessica Alföldi, Qingbo Wang, Ryan L. Collins, et al. 2020.
+<span>“The Mutational Constraint Spectrum Quantified from Variation in
+141,456 Humans.”</span> <em>Nature</em> 581 (7809): 434–43. <a href="https://doi.org/10.1038/s41586-020-2308-7">https://doi.org/10.1038/s41586-020-2308-7</a>.
+</div>
+<div id="ref-kato2003" class="csl-entry" role="listitem">
+Kato, Shunsuke, Shuang-Yin Han, Wen Liu, Kazunori Otsuka, Hiroyuki
+Shibata, Ryunosuke Kanamaru, and Chikashi Ishioka. 2003.
+<span>“Understanding the Function–Structure and Function–Mutation
+Relationships of P53 Tumor Suppressor Protein by High-Resolution
+Missense Mutation Analysis.”</span> <em>Proceedings of the National
+Academy of Sciences</em> 100 (14): 8424–29. <a href="https://doi.org/10.1073/pnas.1431692100">https://doi.org/10.1073/pnas.1431692100</a>.
+</div>
+<div id="ref-katoh2013" class="csl-entry" role="listitem">
+Katoh, K., and D. M. Standley. 2013. <span>“MAFFT Multiple Sequence
+Alignment Software Version 7: Improvements in Performance and
+Usability.”</span> <em>Molecular Biology and Evolution</em> 30 (4):
+772–80. <a href="https://doi.org/10.1093/molbev/mst010">https://doi.org/10.1093/molbev/mst010</a>.
+</div>
+<div id="ref-kendrew1958" class="csl-entry" role="listitem">
+Kendrew, J. C., G. Bodo, H. M. Dintzis, R. G. Parrish, H. Wyckoff, and
+D. C. Phillips. 1958. <span>“A Three-Dimensional Model of the Myoglobin
+Molecule Obtained by x-Ray Analysis.”</span> <em>Nature</em> 181 (4610):
+662–66. <a href="https://doi.org/10.1038/181662a0">https://doi.org/10.1038/181662a0</a>.
+</div>
+<div id="ref-knoppers2014" class="csl-entry" role="listitem">
+Knoppers, Bartha Maria. 2014. <span>“Framework for Responsible Sharing
+of Genomic and Health-Related Data.”</span> <em>The HUGO Journal</em> 8
+(1). <a href="https://doi.org/10.1186/s11568-014-0003-1">https://doi.org/10.1186/s11568-014-0003-1</a>.
+</div>
+<div id="ref-knuth1984" class="csl-entry" role="listitem">
+Knuth, D. E. 1984. <span>“Literate Programming.”</span> <em>The Computer
+Journal</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+</div>
+<div id="ref-kolmogorov2019" class="csl-entry" role="listitem">
+Kolmogorov, Mikhail, Jeffrey Yuan, Yu Lin, and Pavel. A. Pevzner. 2018.
+<span>“Assembly of Long Error-Prone Reads Using Repeat Graphs,”</span>
+January. <a href="https://doi.org/10.1101/247148">https://doi.org/10.1101/247148</a>.
+</div>
+<div id="ref-koren2017" class="csl-entry" role="listitem">
+Koren, Sergey, Brian P. Walenz, Konstantin Berlin, Jason R. Miller,
+Nicholas H. Bergman, and Adam M. Phillippy. 2016. <span>“Canu: Scalable
+and Accurate Long-Read Assembly via Adaptive &lt;i&gt;k&lt;/i&gt; -Mer
+Weighting and Repeat Separation,”</span> August. <a href="https://doi.org/10.1101/071282">https://doi.org/10.1101/071282</a>.
+</div>
+<div id="ref-koster2012" class="csl-entry" role="listitem">
+Köster, Johannes, and Sven Rahmann. 2012. <span>“Snakemake—a Scalable
+Bioinformatics Workflow Engine.”</span> <em>Bioinformatics</em> 28 (19):
+2520–22. <a href="https://doi.org/10.1093/bioinformatics/bts480">https://doi.org/10.1093/bioinformatics/bts480</a>.
+</div>
+<div id="ref-lander2001" class="csl-entry" role="listitem">
+Lander, Eric S., Lauren M. Linton, Bruce Birren, Chad Nusbaum, Michael
+C. Zody, Jennifer Baldwin, Keri Devon, et al. 2001. <span>“Initial
+Sequencing and Analysis of the Human Genome.”</span> <em>Nature</em> 409
+(6822): 860–921. <a href="https://doi.org/10.1038/35057062">https://doi.org/10.1038/35057062</a>.
+</div>
+<div id="ref-landrum2018" class="csl-entry" role="listitem">
+Landrum, Melissa J, Jennifer M Lee, Mark Benson, Garth R Brown, Chen
+Chao, Shanmuga Chitipiralla, Baoshan Gu, et al. 2017. <span>“ClinVar:
+Improving Access to Variant Interpretations and Supporting
+Evidence.”</span> <em>Nucleic Acids Research</em> 46 (D1): D1062–67. <a href="https://doi.org/10.1093/nar/gkx1153">https://doi.org/10.1093/nar/gkx1153</a>.
+</div>
+<div id="ref-langmead2012" class="csl-entry" role="listitem">
+Langmead, Ben, and Steven L Salzberg. 2012. <span>“Fast Gapped-Read
+Alignment with Bowtie 2.”</span> <em>Nature Methods</em> 9 (4): 357–59.
+<a href="https://doi.org/10.1038/nmeth.1923">https://doi.org/10.1038/nmeth.1923</a>.
+</div>
+<div id="ref-lawrence2013" class="csl-entry" role="listitem">
+Lawrence, Michael, Wolfgang Huber, Hervé Pagès, Patrick Aboyoun, Marc
+Carlson, Robert Gentleman, Martin T. Morgan, and Vincent J. Carey. 2013.
+<span>“Software for Computing and Annotating Genomic Ranges.”</span>
+Edited by Andreas Prlic. <em>PLoS Computational Biology</em> 9 (8):
+e1003118. <a href="https://doi.org/10.1371/journal.pcbi.1003118">https://doi.org/10.1371/journal.pcbi.1003118</a>.
+</div>
+<div id="ref-lecun2015" class="csl-entry" role="listitem">
+LeCun, Yann. 2015. <span>“Deep Learning &amp;Amp; Convolutional
+Networks.”</span> In <em>2015 IEEE Hot Chips 27 Symposium (HCS)</em>,
+1–95. IEEE. <a href="https://doi.org/10.1109/hotchips.2015.7477328">https://doi.org/10.1109/hotchips.2015.7477328</a>.
+</div>
+<div id="ref-leek2010" class="csl-entry" role="listitem">
+Leek, Jeffrey T., Robert B. Scharpf, Héctor Corrada Bravo, David Simcha,
+Benjamin Langmead, W. Evan Johnson, Donald Geman, Keith Baggerly, and
+Rafael A. Irizarry. 2010. <span>“Tackling the Widespread and Critical
+Impact of Batch Effects in High-Throughput Data.”</span> <em>Nature
+Reviews Genetics</em> 11 (10): 733–39. <a href="https://doi.org/10.1038/nrg2825">https://doi.org/10.1038/nrg2825</a>.
+</div>
+<div id="ref-li2018minimap2" class="csl-entry" role="listitem">
+Li, Heng. 2018. <span>“Minimap2: Pairwise Alignment for Nucleotide
+Sequences.”</span> Edited by Inanc Birol. <em>Bioinformatics</em> 34
+(18): 3094–3100. <a href="https://doi.org/10.1093/bioinformatics/bty191">https://doi.org/10.1093/bioinformatics/bty191</a>.
+</div>
+<div id="ref-li2009bwa" class="csl-entry" role="listitem">
+Li, Heng, and Richard Durbin. 2009. <span>“Fast and Accurate Short Read
+Alignment with Burrows–Wheeler Transform.”</span>
+<em>Bioinformatics</em> 25 (14): 1754–60. <a href="https://doi.org/10.1093/bioinformatics/btp324">https://doi.org/10.1093/bioinformatics/btp324</a>.
+</div>
+<div id="ref-liao2023" class="csl-entry" role="listitem">
+Liao, Wen-Wei, Mobin Asri, Jana Ebler, Daniel Doerr, Marina Haukness,
+Glenn Hickey, Shuangjia Lu, et al. 2023. <span>“A Draft Human Pangenome
+Reference.”</span> <em>Nature</em> 617 (7960): 312–24. <a href="https://doi.org/10.1038/s41586-023-05896-x">https://doi.org/10.1038/s41586-023-05896-x</a>.
+</div>
+<div id="ref-liao2014" class="csl-entry" role="listitem">
+Liao, Yang, Gordon K. Smyth, and Wei Shi. 2013. <span>“featureCounts: An
+Efficient General Purpose Program for Assigning Sequence Reads to
+Genomic Features.”</span> <em>Bioinformatics</em> 30 (7): 923–30. <a href="https://doi.org/10.1093/bioinformatics/btt656">https://doi.org/10.1093/bioinformatics/btt656</a>.
+</div>
+<div id="ref-libbrecht2015" class="csl-entry" role="listitem">
+Libbrecht, Maxwell W., and William Stafford Noble. 2015. <span>“Machine
+Learning Applications in Genetics and Genomics.”</span> <em>Nature
+Reviews Genetics</em> 16 (6): 321–32. <a href="https://doi.org/10.1038/nrg3920">https://doi.org/10.1038/nrg3920</a>.
+</div>
+<div id="ref-love2014" class="csl-entry" role="listitem">
+Love, Michael I, Wolfgang Huber, and Simon Anders. 2014.
+<span>“Moderated Estimation of Fold Change and Dispersion for RNA-Seq
+Data with DESeq2,”</span> February. <a href="https://doi.org/10.1101/002832">https://doi.org/10.1101/002832</a>.
+</div>
+<div id="ref-maaten2008" class="csl-entry" role="listitem">
+Maaten, Laurens van der, and Geoffrey Hinton. 2008. <span>“<span class="nocase">Visualizing Data using t-SNE</span>.”</span> <em>Journal
+of Machine Learning Research</em> 9: 2579–2605.
+</div>
+<div id="ref-manni2021" class="csl-entry" role="listitem">
+Manni, Mosè, Matthew R Berkeley, Mathieu Seppey, Felipe A Simão, and
+Evgeny M Zdobnov. 2021. <span>“BUSCO Update: Novel and Streamlined
+Workflows Along with Broader and Deeper Phylogenetic Coverage for
+Scoring of Eukaryotic, Prokaryotic, and Viral Genomes.”</span> Edited by
+Joanna Kelley. <em>Molecular Biology and Evolution</em> 38 (10):
+4647–54. <a href="https://doi.org/10.1093/molbev/msab199">https://doi.org/10.1093/molbev/msab199</a>.
+</div>
+<div id="ref-h3africa2014" class="csl-entry" role="listitem">
+Matovu, Enock, Bruno Bucheton, John Chisi, John Enyaru, Christiane
+Hertz-Fowler, Mathurin Koffi, Annette Macleod, et al. 2014.
+<span>“Enabling the Genomic Revolution in Africa.”</span>
+<em>Science</em> 344 (6190): 1346–48. <a href="https://doi.org/10.1126/science.1251546">https://doi.org/10.1126/science.1251546</a>.
+</div>
+<div id="ref-mcinnes2018" class="csl-entry" role="listitem">
+McInnes, Leland, Healy John, and Melville James. 2018. <span>“<span class="nocase">UMAP: Uniform Manifold Approximation and Projection for
+Dimension Reduction</span>.”</span> <em>arXiv (Cornell University)</em>.
+<a href="https://doi.org/10.48550/arxiv.1802.03426">https://doi.org/10.48550/arxiv.1802.03426</a>.
+</div>
+<div id="ref-mckenna2010" class="csl-entry" role="listitem">
+McKenna, Aaron, Matthew Hanna, Eric Banks, Andrey Sivachenko, Kristian
+Cibulskis, Andrew Kernytsky, Kiran Garimella, et al. 2010. <span>“The
+Genome Analysis Toolkit: A MapReduce Framework for Analyzing
+Next-Generation DNA Sequencing Data.”</span> <em>Genome Research</em> 20
+(9): 1297–1303. <a href="https://doi.org/10.1101/gr.107524.110">https://doi.org/10.1101/gr.107524.110</a>.
+</div>
+<div id="ref-mckinney2010" class="csl-entry" role="listitem">
+McKinney, Wes. 2010. <span>“Data Structures for Statistical Computing in
+Python.”</span> In <em>Proceedings of the 9th Python in Science
+Conference</em>, 56–61. SciPy. SciPy. <a href="https://doi.org/10.25080/majora-92bf1922-00a">https://doi.org/10.25080/majora-92bf1922-00a</a>.
+</div>
+<div id="ref-milacic2024" class="csl-entry" role="listitem">
+Milacic, Marija, Deidre Beavers, Patrick Conley, Chuqiao Gong, Marc
+Gillespie, Johannes Griss, Robin Haw, et al. 2023. <span>“The Reactome
+Pathway Knowledgebase 2024.”</span> <em>Nucleic Acids Research</em> 52
+(D1): D672–78. <a href="https://doi.org/10.1093/nar/gkad1025">https://doi.org/10.1093/nar/gkad1025</a>.
+</div>
+<div id="ref-minh2020" class="csl-entry" role="listitem">
+Minh, Bui Quang, Heiko Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael Woodhams, Arndt von Haeseler, and Robert Lanfear. 2019.
+<span>“IQ-TREE 2: New Models and Efficient Methods for Phylogenetic
+Inference in the Genomic Era,”</span> November. <a href="https://doi.org/10.1101/849372">https://doi.org/10.1101/849372</a>.
+</div>
+<div id="ref-mistry2021" class="csl-entry" role="listitem">
+Mistry, Jaina, Sara Chuguransky, Lowri Williams, Matloob Qureshi,
+Gustavo A Salazar, Erik L L Sonnhammer, Silvio C E Tosatto, et al. 2020.
+<span>“Pfam: The Protein Families Database in 2021.”</span> <em>Nucleic
+Acids Research</em> 49 (D1): D412–19. <a href="https://doi.org/10.1093/nar/gkaa913">https://doi.org/10.1093/nar/gkaa913</a>.
+</div>
+<div id="ref-needleman1970" class="csl-entry" role="listitem">
+Needleman, Saul B., and Christian D. Wunsch. 1970. <span>“A General
+Method Applicable to the Search for Similarities in the Amino Acid
+Sequence of Two Proteins.”</span> <em>Journal of Molecular Biology</em>
+48 (3): 443–53. <a href="https://doi.org/10.1016/0022-2836(70)90057-4">https://doi.org/10.1016/0022-2836(70)90057-4</a>.
+</div>
+<div id="ref-noble2009" class="csl-entry" role="listitem">
+Noble, William Stafford. 2009. <span>“A Quick Guide to Organizing
+Computational Biology Projects.”</span> Edited by Fran Lewitter.
+<em>PLoS Computational Biology</em> 5 (7): e1000424. <a href="https://doi.org/10.1371/journal.pcbi.1000424">https://doi.org/10.1371/journal.pcbi.1000424</a>.
+</div>
+<div id="ref-nurk2022" class="csl-entry" role="listitem">
+Nurk, Sergey, Sergey Koren, Arang Rhie, Mikko Rautiainen, Andrey V.
+Bzikadze, Alla Mikheenko, Mitchell R. Vollger, et al. 2022. <span>“The
+Complete Sequence of a Human Genome.”</span> <em>Science</em> 376
+(6588): 44–53. <a href="https://doi.org/10.1126/science.abj6987">https://doi.org/10.1126/science.abj6987</a>.
+</div>
+<div id="ref-saitou1987" class="csl-entry" role="listitem">
+(OUP), Oxford University Press. 1987. <span>“<span class="nocase">The
+neighbor-joining method: a new method for reconstructing phylogenetic
+trees.</span>”</span> <em>Molecular Biology and Evolution</em>. <a href="https://doi.org/10.1093/oxfordjournals.molbev.a040454">https://doi.org/10.1093/oxfordjournals.molbev.a040454</a>.
+</div>
+<div id="ref-patro2017" class="csl-entry" role="listitem">
+Patro, Rob, Geet Duggal, Michael I Love, Rafael A Irizarry, and Carl
+Kingsford. 2017. <span>“Salmon Provides Fast and Bias-Aware
+Quantification of Transcript Expression.”</span> <em>Nature Methods</em>
+14 (4): 417–19. <a href="https://doi.org/10.1038/nmeth.4197">https://doi.org/10.1038/nmeth.4197</a>.
+</div>
+<div id="ref-paysanlafosse2023" class="csl-entry" role="listitem">
+Paysan-Lafosse, Typhaine, Matthias Blum, Sara Chuguransky, Tiago Grego,
+Beatriz Lázaro Pinto, Gustavo A Salazar, Maxwell L Bileschi, et al.
+2022. <span>“InterPro in 2022.”</span> <em>Nucleic Acids Research</em>
+51 (D1): D418–27. <a href="https://doi.org/10.1093/nar/gkac993">https://doi.org/10.1093/nar/gkac993</a>.
+</div>
+<div id="ref-pearson1988" class="csl-entry" role="listitem">
+Pearson, W R, and D J Lipman. 1988. <span>“Improved Tools for Biological
+Sequence Comparison.”</span> <em>Proceedings of the National Academy of
+Sciences</em> 85 (8): 2444–48. <a href="https://doi.org/10.1073/pnas.85.8.2444">https://doi.org/10.1073/pnas.85.8.2444</a>.
+</div>
+<div id="ref-pedregosa2011" class="csl-entry" role="listitem">
+Pedregosa, Fabian, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel,
+Bertrand Thirion, Olivier Grisel, Mathieu Blondel, et al. 2011.
+<span>“<span class="nocase">Scikit-learn: Machine Learning in
+Python</span>.”</span> <em>Journal of Machine Learning Research</em> 12:
+2825–30.
+</div>
+<div id="ref-perez2007" class="csl-entry" role="listitem">
+Perez, Fernando, and Brian E. Granger. 2007. <span>“IPython: A System
+for Interactive Scientific Computing.”</span> <em>Computing in Science
+&amp;Amp; Engineering</em> 9 (3): 21–29. <a href="https://doi.org/10.1109/mcse.2007.53">https://doi.org/10.1109/mcse.2007.53</a>.
+</div>
+<div id="ref-pettersen2021" class="csl-entry" role="listitem">
+Pettersen, Eric F., Thomas D. Goddard, Conrad C. Huang, Elaine C. Meng,
+Gregory S. Couch, Tristan I. Croll, John H. Morris, and Thomas E.
+Ferrin. 2020. <span>“&lt;Scp&gt;UCSF ChimeraX&lt;/Scp&gt; : Structure
+Visualization for Researchers, Educators, and Developers.”</span>
+<em>Protein Science</em> 30 (1): 70–82. <a href="https://doi.org/10.1002/pro.3943">https://doi.org/10.1002/pro.3943</a>.
+</div>
+<div id="ref-popejoy2016" class="csl-entry" role="listitem">
+Popejoy, Alice B., and Stephanie M. Fullerton. 2016. <span>“Genomics Is
+Failing on Diversity.”</span> <em>Nature</em> 538 (7624): 161–64. <a href="https://doi.org/10.1038/538161a">https://doi.org/10.1038/538161a</a>.
+</div>
+<div id="ref-quick2017" class="csl-entry" role="listitem">
+Quick, Josh, Nathan D Grubaugh, Steven T Pullan, Ingra M Claro, Andrew D
+Smith, Karthik Gangavarapu, Glenn Oliveira, et al. 2017.
+<span>“Multiplex PCR Method for MinION and Illumina Sequencing of Zika
+and Other Virus Genomes Directly from Clinical Samples,”</span> January.
+<a href="https://doi.org/10.1101/098913">https://doi.org/10.1101/098913</a>.
+</div>
+<div id="ref-rcoreteam" class="csl-entry" role="listitem">
+R Core Team. 2024. <em><span class="nocase">R: A Language and
+Environment for Statistical Computing</span></em>. Vienna, Austria: R
+Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-rambaut2020" class="csl-entry" role="listitem">
+Rambaut, Andrew, Edward C. Holmes, Áine O’Toole, Verity Hill, John T.
+McCrone, Christopher Ruis, Louis du Plessis, and Oliver G. Pybus. 2020.
+<span>“A Dynamic Nomenclature Proposal for SARS-CoV-2 Lineages to Assist
+Genomic Epidemiology.”</span> <em>Nature Microbiology</em> 5 (11):
+1403–7. <a href="https://doi.org/10.1038/s41564-020-0770-5">https://doi.org/10.1038/s41564-020-0770-5</a>.
+</div>
+<div id="ref-relling2015" class="csl-entry" role="listitem">
+Relling, Mary V., and William E. Evans. 2015. <span>“Pharmacogenomics in
+the Clinic.”</span> <em>Nature</em> 526 (7573): 343–50. <a href="https://doi.org/10.1038/nature15817">https://doi.org/10.1038/nature15817</a>.
+</div>
+<div id="ref-richards2015" class="csl-entry" role="listitem">
+Richards, Sue, Nazneen Aziz, Sherri Bale, David Bick, Soma Das, Julie
+Gastier-Foster, Wayne W. Grody, et al. 2015. <span>“Standards and
+Guidelines for the Interpretation of Sequence Variants: A Joint
+Consensus Recommendation of the American College of Medical Genetics and
+Genomics and the Association for Molecular Pathology.”</span>
+<em>Genetics in Medicine</em> 17 (5): 405–24. <a href="https://doi.org/10.1038/gim.2015.30">https://doi.org/10.1038/gim.2015.30</a>.
+</div>
+<div id="ref-ritchie2015" class="csl-entry" role="listitem">
+Ritchie, Matthew E., Belinda Phipson, Di Wu, Yifang Hu, Charity W. Law,
+Wei Shi, and Gordon K. Smyth. 2015. <span>“Limma Powers Differential
+Expression Analyses for RNA-Sequencing and Microarray Studies.”</span>
+<em>Nucleic Acids Research</em> 43 (7): e47–47. <a href="https://doi.org/10.1093/nar/gkv007">https://doi.org/10.1093/nar/gkv007</a>.
+</div>
+<div id="ref-robertson2017" class="csl-entry" role="listitem">
+Robertson, A. Gordon, Jaegil Kim, Hikmat Al-Ahmadie, Joaquim Bellmunt,
+Guangwu Guo, Andrew D. Cherniack, Toshinori Hinoue, et al. 2017.
+<span>“Comprehensive Molecular Characterization of Muscle-Invasive
+Bladder Cancer.”</span> <em>Cell</em> 171 (3): 540–556.e25. <a href="https://doi.org/10.1016/j.cell.2017.09.007">https://doi.org/10.1016/j.cell.2017.09.007</a>.
+</div>
+<div id="ref-robinson2010" class="csl-entry" role="listitem">
+Robinson, Mark D., Davis J. McCarthy, and Gordon K. Smyth. 2009.
+<span>“&lt;Tt&gt;edgeR&lt;/Tt&gt; : A Bioconductor Package for
+Differential Expression Analysis of Digital Gene Expression
+Data.”</span> <em>Bioinformatics</em> 26 (1): 139–40. <a href="https://doi.org/10.1093/bioinformatics/btp616">https://doi.org/10.1093/bioinformatics/btp616</a>.
+</div>
+<div id="ref-sandve2013" class="csl-entry" role="listitem">
+Sandve, Geir Kjetil, Anton Nekrutenko, James Taylor, and Eivind Hovig.
+2013. <span>“Ten Simple Rules for Reproducible Computational
+Research.”</span> Edited by Philip E. Bourne. <em>PLoS Computational
+Biology</em> 9 (10): e1003285. <a href="https://doi.org/10.1371/journal.pcbi.1003285">https://doi.org/10.1371/journal.pcbi.1003285</a>.
+</div>
+<div id="ref-sayers2021" class="csl-entry" role="listitem">
+Sayers, Eric W, Evan E Bolton, J Rodney Brister, Kathi Canese, Jessica
+Chan, Donald C Comeau, Ryan Connor, et al. 2021. <span>“Database
+Resources of the National Center for Biotechnology Information.”</span>
+<em>Nucleic Acids Research</em> 50 (D1): D20–26. <a href="https://doi.org/10.1093/nar/gkab1112">https://doi.org/10.1093/nar/gkab1112</a>.
+</div>
+<div id="ref-seemann2014" class="csl-entry" role="listitem">
+Seemann, Torsten. 2014. <span>“Prokka: Rapid Prokaryotic Genome
+Annotation.”</span> <em>Bioinformatics</em> 30 (14): 2068–69. <a href="https://doi.org/10.1093/bioinformatics/btu153">https://doi.org/10.1093/bioinformatics/btu153</a>.
+</div>
+<div id="ref-sherry2001" class="csl-entry" role="listitem">
+Sherry, S. T. 2001. <span>“dbSNP: The NCBI Database of Genetic
+Variation.”</span> <em>Nucleic Acids Research</em> 29 (1): 308–11. <a href="https://doi.org/10.1093/nar/29.1.308">https://doi.org/10.1093/nar/29.1.308</a>.
+</div>
+<div id="ref-sievers2011" class="csl-entry" role="listitem">
+Sievers, Fabian, Andreas Wilm, David Dineen, Toby J Gibson, Kevin
+Karplus, Weizhong Li, Rodrigo Lopez, et al. 2011. <span>“Fast, Scalable
+Generation of High‐quality Protein Multiple Sequence Alignments Using
+Clustal Omega.”</span> <em>Molecular Systems Biology</em> 7 (1). <a href="https://doi.org/10.1038/msb.2011.75">https://doi.org/10.1038/msb.2011.75</a>.
+</div>
+<div id="ref-simon2003" class="csl-entry" role="listitem">
+Simon, R., M. D. Radmacher, K. Dobbin, and L. M. McShane. 2003.
+<span>“Pitfalls in the Use of DNA Microarray Data for Diagnostic and
+Prognostic Classification.”</span> <em>JNCI Journal of the National
+Cancer Institute</em> 95 (1): 14–18. <a href="https://doi.org/10.1093/jnci/95.1.14">https://doi.org/10.1093/jnci/95.1.14</a>.
+</div>
+<div id="ref-sirugo2019" class="csl-entry" role="listitem">
+Sirugo, Giorgio, Scott M. Williams, and Sarah A. Tishkoff. 2019.
+<span>“The Missing Diversity in Human Genetic Studies.”</span>
+<em>Cell</em> 177 (4): 1080. <a href="https://doi.org/10.1016/j.cell.2019.04.032">https://doi.org/10.1016/j.cell.2019.04.032</a>.
+</div>
+<div id="ref-smith1981" class="csl-entry" role="listitem">
+Smith, T. F., and M. S. Waterman. 1981. <span>“Identification of Common
+Molecular Subsequences.”</span> <em>Journal of Molecular Biology</em>
+147 (1): 195–97. <a href="https://doi.org/10.1016/0022-2836(81)90087-5">https://doi.org/10.1016/0022-2836(81)90087-5</a>.
+</div>
+<div id="ref-stamatakis2014" class="csl-entry" role="listitem">
+Stamatakis, Alexandros. 2014. <span>“RAxML Version 8: A Tool for
+Phylogenetic Analysis and Post-Analysis of Large Phylogenies.”</span>
+<em>Bioinformatics</em> 30 (9): 1312–13. <a href="https://doi.org/10.1093/bioinformatics/btu033">https://doi.org/10.1093/bioinformatics/btu033</a>.
+</div>
+<div id="ref-stanke2006" class="csl-entry" role="listitem">
+Stanke, M., O. Keller, I. Gunduz, A. Hayes, S. Waack, and B.
+Morgenstern. 2006. <span>“AUGUSTUS: Ab Initio Prediction of Alternative
+Transcripts.”</span> <em>Nucleic Acids Research</em> 34 (Web Server):
+W435–39. <a href="https://doi.org/10.1093/nar/gkl200">https://doi.org/10.1093/nar/gkl200</a>.
+</div>
+<div id="ref-storey2003" class="csl-entry" role="listitem">
+Storey, John D., and Robert Tibshirani. 2003. <span>“Statistical
+Significance for Genomewide Studies.”</span> <em>Proceedings of the
+National Academy of Sciences</em> 100 (16): 9440–45. <a href="https://doi.org/10.1073/pnas.1530509100">https://doi.org/10.1073/pnas.1530509100</a>.
+</div>
+<div id="ref-subramanian2005" class="csl-entry" role="listitem">
+Subramanian, Aravind, Pablo Tamayo, Vamsi K. Mootha, Sayan Mukherjee,
+Benjamin L. Ebert, Michael A. Gillette, Amanda Paulovich, et al. 2005.
+<span>“Gene Set Enrichment Analysis: A Knowledge-Based Approach for
+Interpreting Genome-Wide Expression Profiles.”</span> <em>Proceedings of
+the National Academy of Sciences</em> 102 (43): 15545–50. <a href="https://doi.org/10.1073/pnas.0506580102">https://doi.org/10.1073/pnas.0506580102</a>.
+</div>
+<div id="ref-szklarczyk2023" class="csl-entry" role="listitem">
+Szklarczyk, Damian, Rebecca Kirsch, Mikaela Koutrouli, Katerina Nastou,
+Farrokh Mehryary, Radja Hachilif, Annika L Gable, et al. 2022.
+<span>“The STRING Database in 2023: Protein–Protein Association Networks
+and Functional Enrichment Analyses for Any Sequenced Genome of
+Interest.”</span> <em>Nucleic Acids Research</em> 51 (D1): D638–46. <a href="https://doi.org/10.1093/nar/gkac1000">https://doi.org/10.1093/nar/gkac1000</a>.
+</div>
+<div id="ref-tamura2021" class="csl-entry" role="listitem">
+Tamura, Koichiro, Glen Stecher, and Sudhir Kumar. 2021. <span>“MEGA11:
+Molecular Evolutionary Genetics Analysis Version 11.”</span> Edited by
+Fabia Ursula Battistuzzi. <em>Molecular Biology and Evolution</em> 38
+(7): 3022–27. <a href="https://doi.org/10.1093/molbev/msab120">https://doi.org/10.1093/molbev/msab120</a>.
+</div>
+<div id="ref-tate2019" class="csl-entry" role="listitem">
+Tate, John G, Sally Bamford, Harry C Jubb, Zbyslaw Sondka, David M
+Beare, Nidhi Bindal, Harry Boutselakis, et al. 2018. <span>“COSMIC: The
+Catalogue of Somatic Mutations in Cancer.”</span> <em>Nucleic Acids
+Research</em> 47 (D1): D941–47. <a href="https://doi.org/10.1093/nar/gky1015">https://doi.org/10.1093/nar/gky1015</a>.
+</div>
+<div id="ref-tatusova2016" class="csl-entry" role="listitem">
+Tatusova, Tatiana, Michael DiCuccio, Azat Badretdin, Vyacheslav
+Chetvernin, Eric P. Nawrocki, Leonid Zaslavsky, Alexandre Lomsadze, Kim
+D. Pruitt, Mark Borodovsky, and James Ostell. 2016. <span>“NCBI
+Prokaryotic Genome Annotation Pipeline.”</span> <em>Nucleic Acids
+Research</em> 44 (14): 6614–24. <a href="https://doi.org/10.1093/nar/gkw569">https://doi.org/10.1093/nar/gkw569</a>.
+</div>
+<div id="ref-tegally2022" class="csl-entry" role="listitem">
+Tegally, Houriiyah, James E. San, Matthew Cotten, Monika Moir, Bryan
+Tegomoh, Gerald Mboowa, Darren P. Martin, et al. 2022. <span>“The
+Evolving SARS-CoV-2 Epidemic in Africa: Insights from Rapidly Expanding
+Genomic Surveillance.”</span> <em>Science</em> 378 (6615). <a href="https://doi.org/10.1126/science.abq5358">https://doi.org/10.1126/science.abq5358</a>.
+</div>
+<div id="ref-thompson1994" class="csl-entry" role="listitem">
+Thompson, Julie D., Desmond G. Higgins, and Toby J. Gibson. 1994.
+<span>“CLUSTAL w: Improving the Sensitivity of Progressive Multiple
+Sequence Alignment Through Sequence Weighting, Position-Specific Gap
+Penalties and Weight Matrix Choice.”</span> <em>Nucleic Acids
+Research</em> 22 (22): 4673–80. <a href="https://doi.org/10.1093/nar/22.22.4673">https://doi.org/10.1093/nar/22.22.4673</a>.
+</div>
+<div id="ref-thorvaldsdottir2013" class="csl-entry" role="listitem">
+Thorvaldsdottir, H., J. T. Robinson, and J. P. Mesirov. 2012.
+<span>“Integrative Genomics Viewer (IGV): High-Performance Genomics Data
+Visualization and Exploration.”</span> <em>Briefings in
+Bioinformatics</em> 14 (2): 178–92. <a href="https://doi.org/10.1093/bib/bbs017">https://doi.org/10.1093/bib/bbs017</a>.
+</div>
+<div id="ref-trott2010" class="csl-entry" role="listitem">
+Trott, Oleg, and Arthur J. Olson. 2009. <span>“AutoDock Vina: Improving
+the Speed and Accuracy of Docking with a New Scoring Function, Efficient
+Optimization, and Multithreading.”</span> <em>Journal of Computational
+Chemistry</em> 31 (2): 455–61. <a href="https://doi.org/10.1002/jcc.21334">https://doi.org/10.1002/jcc.21334</a>.
+</div>
+<div id="ref-varadi2022" class="csl-entry" role="listitem">
+Varadi, Mihaly, Stephen Anyango, Mandar Deshpande, Sreenath Nair, Cindy
+Natassia, Galabina Yordanova, David Yuan, et al. 2021. <span>“AlphaFold
+Protein Structure Database: Massively Expanding the Structural Coverage
+of Protein-Sequence Space with High-Accuracy Models.”</span> <em>Nucleic
+Acids Research</em> 50 (D1): D439–44. <a href="https://doi.org/10.1093/nar/gkab1061">https://doi.org/10.1093/nar/gkab1061</a>.
+</div>
+<div id="ref-venter2001" class="csl-entry" role="listitem">
+Venter, J. Craig, Mark D. Adams, Eugene W. Myers, Peter W. Li, Richard
+J. Mural, Granger G. Sutton, Hamilton O. Smith, et al. 2001. <span>“The
+Sequence of the Human Genome.”</span> <em>Science</em> 291 (5507):
+1304–51. <a href="https://doi.org/10.1126/science.1058040">https://doi.org/10.1126/science.1058040</a>.
+</div>
+<div id="ref-virtanen2020" class="csl-entry" role="listitem">
+Virtanen, Pauli, Ralf Gommers, Travis E. Oliphant, Matt Haberland, Tyler
+Reddy, David Cournapeau, Evgeni Burovski, et al. 2020. <span>“SciPy 1.0:
+Fundamental Algorithms for Scientific Computing in Python.”</span>
+<em>Nature Methods</em> 17 (3): 261–72. <a href="https://doi.org/10.1038/s41592-019-0686-2">https://doi.org/10.1038/s41592-019-0686-2</a>.
+</div>
+<div id="ref-weinstein2013" class="csl-entry" role="listitem">
+Weinstein, John N, Eric A Collisson, Gordon B Mills, Kenna R Mills Shaw,
+Brad A Ozenberger, Kyle Ellrott, Ilya Shmulevich, Chris Sander, and
+Joshua M Stuart. 2013. <span>“The Cancer Genome Atlas Pan-Cancer
+Analysis Project.”</span> <em>Nature Genetics</em> 45 (10): 1113–20. <a href="https://doi.org/10.1038/ng.2764">https://doi.org/10.1038/ng.2764</a>.
+</div>
+<div id="ref-whirlcarrillo2021" class="csl-entry" role="listitem">
+Whirl‐Carrillo, Michelle, Rachel Huddart, Li Gong, Katrin Sangkuhl,
+Caroline F. Thorn, Ryan Whaley, and Teri E. Klein. 2021. <span>“An
+Evidence‐based Framework for Evaluating Pharmacogenomics Knowledge for
+Personalized Medicine.”</span> <em>Clinical Pharmacology &amp;Amp;
+Therapeutics</em> 110 (3): 563–72. <a href="https://doi.org/10.1002/cpt.2350">https://doi.org/10.1002/cpt.2350</a>.
+</div>
+<div id="ref-wickham2019" class="csl-entry" role="listitem">
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy
+McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>“Welcome
+to the Tidyverse.”</span> <em>Journal of Open Source Software</em> 4
+(43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
+</div>
+<div id="ref-wilkinson2016" class="csl-entry" role="listitem">
+Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg,
+Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, et al.
+2016. <span>“The FAIR Guiding Principles for Scientific Data Management
+and Stewardship.”</span> <em>Scientific Data</em> 3 (1). <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.
+</div>
+<div id="ref-wilson2017" class="csl-entry" role="listitem">
+Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex
+Nederbragt, and Tracy K. Teal. 2017. <span>“Good Enough Practices in
+Scientific Computing.”</span> Edited by Francis Ouellette. <em>PLOS
+Computational Biology</em> 13 (6): e1005510. <a href="https://doi.org/10.1371/journal.pcbi.1005510">https://doi.org/10.1371/journal.pcbi.1005510</a>.
+</div>
+<div id="ref-wood2019" class="csl-entry" role="listitem">
+Wood, Derrick E., Jennifer Lu, and Ben Langmead. 2019. <span>“Improved
+Metagenomic Analysis with Kraken 2.”</span> <a href="https://doi.org/10.1101/762302">https://doi.org/10.1101/762302</a>.
+</div>
+<div id="ref-xie2015" class="csl-entry" role="listitem">
+Xie, Yihui. 2016. <em>Dynamic Documents with r and Knitr</em>. Chapman;
+Hall/CRC. <a href="https://doi.org/10.1201/b15166">https://doi.org/10.1201/b15166</a>.
+</div>
+<div id="ref-yu2012" class="csl-entry" role="listitem">
+Yu, Guangchuang, Li-Gen Wang, Yanyan Han, and Qing-Yu He. 2012.
+<span>“clusterProfiler: An r Package for Comparing Biological Themes
+Among Gene Clusters.”</span> <em>OMICS: A Journal of Integrative
+Biology</em> 16 (5): 284–87. <a href="https://doi.org/10.1089/omi.2011.0118">https://doi.org/10.1089/omi.2011.0118</a>.
+</div>
+<div id="ref-zou2019" class="csl-entry" role="listitem">
+Zou, James, Mikael Huss, Abubakar Abid, Pejman Mohammadi, Ali Torkamani,
+and Amalio Telenti. 2018. <span>“A Primer on Deep Learning in
+Genomics.”</span> <em>Nature Genetics</em> 51 (1): 12–18. <a href="https://doi.org/10.1038/s41588-018-0295-5">https://doi.org/10.1038/s41588-018-0295-5</a>.
+</div>
+</div>
+
+
+<!-- -->
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/babasaraki\.github\.io\/practical-bioinformatics\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./appendices/d-command-reference.html" class="pagination-link" aria-label="Command and function reference">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Command and function reference</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Every work cited in this book is listed here. The bibliography is generated from</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">`references.bib`</span>, in which each entry was resolved against the Crossref or OpenAlex</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>metadata registries and carries a registered DOI, except for the handful of works</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>that have none — the JMLR articles, the R manual and the FastQC documentation — which</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>are marked as such in the file.</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>To rebuild the bibliography from scratch:</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">```{.bash}</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in">python scripts/build_bibliography.py    # resolve against Crossref</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">python scripts/resolve_openalex.py      # fill gaps using OpenAlex (needs an API key)</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="in">python scripts/normalise_bibliography.py  # replace each entry with the publisher's own record</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><em>Practical Approach to Learning Bioinformatics</em> by Umar Ahmad.</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></p>
+<div class="toc-actions"><ul><li><a href="https://github.com/babasaraki/practical-bioinformatics/edit/main/references.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/babasaraki/practical-bioinformatics/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/babasaraki/practical-bioinformatics/blob/main/references.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
